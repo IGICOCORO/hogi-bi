@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+     <script src="./app.js" defer></script>
+    <script  src="cdn.min.js" defer></script>
+    <script type="text/javascript">
+    window.addEventListener("scroll", function() {
+        var header = document.querySelector("nav");
+        header.classList.toggle("black", window.scrollY > 0);
+    })
+    </script>
+    <title>HOGI</title>
+</head>
+
+<body>
+    <div x-data="app">
+        <div class="container">
+            <nav>
+                <div class="header">
+                    <div class="navbar">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="./image/logo1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="menu">
+                            <template  x-for="(item,i) in menus">
+                                <ul class="menuItem" >
+                                    <li>
+                                    <a class="links" :href="`#${menus[i]}`">
+                                        <i :class="icons[i]"></i>
+                                        <p :style="{'padding-left':15 +'px'}" x-text="dict[lang][item]"></p>
+                                    </a>
+                                </li>
+                                </ul>
+                            </template>
+                            <div class="lang-menu">
+                                <div class="selected-lang">
+                                    <img class="selectlang" :src="getFlags(lang)" width="25" height="15">
+                                    <p x-text="dict[lang]['lang']"></p>
+                                </div>
+                                <ul class="flags">
+                                    <li class="flagname" @click="lang='en'">
+                                        <a class="en">
+                                            <img class="flag" src="./image/ENGLISH.jpg" alt="Image Load Error" width="25" height="15" />
+                                            English
+                                        </a>
+                                    </li>
+                                    <li class="flagname" @click="lang='fr'">
+                                        <a class="fr">
+                                            <img class="flag" src="./image/FRENCH.jpg" alt="Image Load Error" width="25" height="15" />
+                                            French
+                                        </a>
+                                    </li>
+                                    <li class="flagname" @click="lang='rn'">
+                                        <a class="ki">
+                                            <img class="flag" src="./image/KIRUNDI.jpg" alt="Image Load Error" width="25" height="15" />
+                                            Kirundi
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="title_part">
+            <div class="home">
+                <div class="img">
+                    <img src="" alt="">
+                    <div class="text">
+                        <h1>HOGI</h1>
+                    </div>
+                    <div class="paragraph">
+                        <div class="wrapper">
+                            <p>We transform </p>
+                            <ul class="dynamic-texts">
+                                <li>
+                                    <span id="text">
+                                        <span id="text1">Problems</span> into <span id="text2">solutions.</span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span id="text">
+                                        <span id="text1">Issues</span> into <span id="text2">opportunities.</span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span id="text">
+                                        <span id="text1">Ideas</span> into <span id="text2">reality.</span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="button-contact">
+                        <a href="">
+                            <button>Get in touch<i class="far fa-envelope">
+                                </i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div :id="menus[0]">
+            <div class="valeurs">
+                <div class="title">
+                    <h1 x-text="dict[lang]['techvalue']"></h1>
+                </div>
+                <div class="cards">
+                    <template  x-for="item,i in valTechtitle">
+                        <div class="container-values">
+                            <div class="cardbox">
+                                <div class="texto">
+                                    <h3 :style="{ 'color':backIcon[i]}" x-text="dict[lang][valTechtitle[i]]"></h3><br>
+                                    <span x-text="dict[lang][valTechdescr[i]]"></span>
+                                </div>
+                                <div class="icon" :style="{ 'background-color':backIcon[i]}">
+                                    <i :class="Fafa[i]"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+        <div class="codes">
+            <div class="title-code">
+                <p x-text="dict[lang]['codeonlytitle']"></p>
+            </div>
+            <template x-for="item,i in codeonlytitleT.length" >
+                <div class="card1-code" >
+                <div class="pic">
+                    <img :src="Images[i]" alt="">
+                </div>
+                <div class="text">
+                    <p>
+                        <span id="code1" x-text="dict[lang][codeonlytitleT[item-1]]"></span>
+                        <br>
+                        <br>
+                        <span x-text="dict[lang][codeonlydescrT[item-1]]"></span>.</p>
+                </div>
+            </div>
+            </template>
+        </div>
+        <div class="udev">
+            <div class="title">
+                <p x-text="dict[lang]['handwithudev']"></p>
+            </div>
+            <div class="button">
+                <a href="">
+                    <button x-text="dict[lang]['moreinfos']"><i class="fas fa-mouse-pointer">
+                        </i>
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div :id="menus[1]">
+            <div class="team">
+                <div class="title">
+                    <p x-text="dict[lang]['titlequipe']"></p>
+                </div>
+                <div class="container-img">
+                    <div class="box">
+                        <div class="imgbox">
+                            <img src="./image/incognito.jpg" alt="">
+                        </div>
+                        <h1>Incogito</h1>
+                        <p>Manager de projets</p>
+                        <div class="icons">
+                            <div class="facebook">
+                                <a href="">
+                                    <i class="fab fa-facebook-f">
+                                    </i>
+                                </a>
+                            </div>
+                            <div class="twitter">
+                                <a href="https://twitter.com/prime_Ikiza" target="blank">
+                                    <i class="fab fa-twitter">
+                                    </i>
+                                </a>
+                            </div>
+                            <div class="whatsapp">
+                                <a href="https://api.whatsapp.com/send?phone=25768900800" target="blank">
+                                    <i class="fab fa-whatsapp">
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="imgbox">
+                            <img src="./image/yuda.jpg" alt="">
+                        </div>
+                        <h1>Yuda</h1>
+                        <p>Designer Graphique et Motion</p>
+                        <div class="icons">
+                            <div class="facebook">
+                                <a href="https://www.facebook.com/juda.inno" target="blank">
+                                    <i class="fab fa-facebook-f">
+                                    </i>
+                                </a>
+                            </div>
+                            <div class="twitter">
+                                <a href="https://behance.com/sangweno2cd4" target="blank">
+                                    <i class="fab fa-behance">
+                                    </i>
+                                </a>
+                            </div>
+                            <div class="twitter">
+                                <a href="https://twitter.com/St_yuda1" target="blank">
+                                    <i class="fab fa-twitter">
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="imgbox">
+                            <img src="./image/konstructor.jpg" alt="">
+                        </div>
+                        <h1>Nkurunziza</h1>
+                        <p>Architecte et developpeur</p>
+                        <div class="icons">
+                            <div class="whatsapp">
+                                <a href="https://twitter.com/St_yuda1" target="blank">
+                                    <i class="fab fa-whatsapp">
+                                    </i>
+                                </a>
+                            </div>
+                            <div class="twitter">
+                                <a href="https://twitter.com/inganzamarumpu" target="blank">
+                                    <i class="fab fa-twitter">
+                                    </i>
+                                </a>
+                            </div>
+                            <div class="twitter">
+                                <a href="https://github.com/inganzamarumpu" target="blank">
+                                    <i class="fab fa-github">
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="imgbox">
+                            <img src="./image/artcalo.jpg" alt="">
+                        </div>
+                        <h1>Artcal'o</h1>
+                        <p>developpeur</p>
+                        <div class="icons">
+                            <div class="facebook">
+                                <a href="https://www.facebook.com/carmel.niyungeko" target="blank">
+                                    <i class="fab fa-facebook-f">
+                                    </i>
+                                </a>
+                            </div>
+                            <div class="twitter">
+                                <a href="https://github.com/ArtcalO97/" target="blank">
+                                    <i class="fab fa-github">
+                                    </i>
+                                </a>
+                            </div>
+                            <div class="whatsapp">
+                                <a href="https://api.whatsapp.com/send?phone=25761640457" target="blank">
+                                    <i class="fab fa-whatsapp">
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="imgbox">
+                            <img src="./image/shwaib.jpg" alt="">
+                        </div>
+                        <h1>Shwaïb LeBon</h1>
+                        <p>Developpeur Web</p>
+                        <div class="icons">
+                            <div class="facebook">
+                                <a href="https://www.facebook.com/ndabashinze.shwaib" target="blank">
+                                    <i class="fab fa-facebook-f">
+                                    </i>
+                                </a>
+                            </div>
+                            <div class="twitter">
+                                <a href="https://github.com/shwaiblebon/" target="blank">
+                                    <i class="fab fa-github">
+                                    </i>
+                                </a>
+                            </div>
+                            <div class="whatsapp">
+                                <a href="https://api.whatsapp.com/send?phone=25772029330" target="blank">
+                                    <i class="fab fa-whatsapp">
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="imgbox">
+                            <img src="./image/tony.jpg" alt="">
+                        </div>
+                        <h1>TonyBim</h1>
+                        <p>Designer Graphique et Motion</p>
+                        <div class="icons">
+                            <div class="facebook">
+                                <a href="https://www.facebook.com/profile.php?id=100009844923833" target="blank"> <i class="fab fa-facebook-f">
+                                    </i>
+                                </a>
+                            </div>
+                            <div class="twitter">
+                                <a href="https://twitter.com/bimenyimana_b" target="blank">
+                                    <i class="fab fa-twitter">
+                                    </i>
+                                </a>
+                            </div>
+                            <div class="whatsapp">
+                                <a href="https://api.whatsapp.com/send?phone=25776161970" target="blank">
+                                    <i class="fab fa-whatsapp">
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="imgbox">
+                            <a href="">
+                                <img src="./image/jovin.jpg" alt="">
+                            </a>
+                        </div>
+                        <h1>Mtl. Nsanzumukiza</h1>
+                        <p>Manager de projets assistant</p>
+                        <div class="icons">
+                            <div class="facebook">
+                                <a href="https://www.facebook.com/thierry.nsanzumukiza.3" target="blank">
+                                    <i class="fab fa-facebook-f">
+                                    </i>
+                                </a>
+                            </div>
+                            <div class="whatsapp">
+                                <a href="https://www.linkedin.com/in/thierry-jovin-9b8bb1109/" target="blank">
+                                    <i class="fab fa-linkedin-in">
+                                    </i>
+                                </a>
+                            </div>
+                            <div class="twitter">
+                                <a href="mailto:nsanzumukizath@gmail.com" target="blank">
+                                    <i class="far fa-envelope">
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="imgbox">
+                            <img src="./image/dezos.jpg" alt="">
+                        </div>
+                        <h1>Dezos</h1>
+                        <p>Programmeur</p>
+                        <div class="icons">
+                            <div class="facebook">
+                                <a href="">
+                                    <i class="fab fa-facebook-f">
+                                    </i>
+                                </a>
+                            </div>
+                            <div class="twitter">
+                                <a href="https://github.com/Desire1990/" target="blank"> <i class="fab fa-github">
+                                    </i>
+                                </a>
+                            </div>
+                            <div class="whatsapp">
+                                <a href="https://api.whatsapp.com/send?phone=25779462806" target="blank">
+                                    <i class="fab fa-whatsapp">
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="imgbox">
+                            <img src="./image/guy.jpg" alt="">
+                        </div>
+                        <h1>Guy-Michel</h1>
+                        <p>Developpeur</p>
+                        <div class="icons">
+                            <div class="twitter">
+                                <a href="https://twitter.com/GBstallman">
+                                    <i class="fab fa-twitter">
+                                    </i>
+                                </a>
+                            </div>
+                            <div class="twitter">
+                                <a href="https://github.com/GBstallman" target="blank">
+                                    <i class="fab fa-github">
+                                    </i>
+                                </a>
+                            </div>
+                            <div class="whatsapp">
+                                <a href="https://api.whatsapp.com/send?phone=25768381368" target="blank"> <i class="fab fa-whatsapp">
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div :id="menus[2]">
+            <div class="portfolio">
+                <div class="title">
+                    <h1 x-text="dict[lang]['titlequipe']"></h1>
+                </div>
+                <div class="cardpic">
+                    <div class="imgbox">
+                        <img src="./image/csdteam.jpg" alt="">
+                        <p>CSD Team</p>
+                    </div>
+                    <div class="imgbox">
+                        <img src="./image/podika.jpg" alt="">
+                        <p>PODIKA</p>
+                    </div>
+                    <div class="imgbox">
+                        <img src="./image/podika-android.jpg" alt="">
+                        <p>PODIKA App</p>
+                    </div>
+                    <div class="imgbox">
+                        <img src="./image/zero-plastic.jpg" alt="">
+                        <p>Zero Plastic App</p>
+                    </div>
+                    <div class="imgbox">
+                        <img src="./image/hogi-online.jpg" alt="">
+                        <p>HOGI Online</p>
+                    </div>
+                    <div class="imgbox">
+                        <img src="./image/rc-retraining.jpg" alt="">
+                        <p>RC rc-retraining</p>
+                    </div>
+                    <div class="imgbox">
+                        <img src="./image/bimbo.jpg" alt="">
+                        <p>BIMBO Supermarket</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div :id="menus[3]">
+            <div class="contact">
+                <div class="title">
+                    <h1 x-text="dict[lang]['titlecontact']"></h1>
+                </div>
+                <div class="contact-part">
+                    <div class="part1">
+                        <div class="part1box">
+                            <h1>Phone</h1>
+                            <a href="tel:+25776161970">
+                                <p>+257 75 20 22 31</p>
+                            </a>
+                        </div>
+                        <div class="part1box">
+                            <h1>E-mail</h1>
+                            <a href="mailto:contact@hogi.bi">
+                                <p>contact@hogi.bi</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="part2">
+                        <div class="form">
+                            <label for="">Addresse e-mail:</label>
+                            <br>
+                            <input type="email" placeholder="">
+                            <br>
+                            <p>We'll never share your email with anyone else.</p>
+                            <br>
+                            <label for="">Nom: </label>
+                            <br>
+                            <input type="text">
+                            <br>
+                            <br>
+                            <label for="">Message</label>
+                            <br>
+                            <textarea name="" id="" cols="30" rows="10">
+                            </textarea>
+                            <br>
+                            <br>
+                            <a href="#">
+                                <button>Envoyer</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="icons">
+                <a href="#">
+                    <i class="fab fa-facebook-f">
+                    </i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter">
+                    </i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-youtube">
+                    </i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-instagram">
+                    </i>
+                </a>
+            </div>
+            <div class="copyright">
+                <p>© Copyright 2021 | HOGI. All Rights Reserved. </p>
+            </div>
+        </div>
+    </div>
+   
+</body>
+
+</html>
