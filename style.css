@@ -12,7 +12,7 @@
 --aqua:#40B0BF;
 }
 *{
-font-family:jost;
+font-family:Jost,sans-serif;
 margin:0 auto;
 list-style-type: none;
 text-decoration: none;
@@ -375,15 +375,15 @@ padding:7px 7px 7px 7px;
 border-radius:100px;
 }
 .container-values{
-width:182vw;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(520px,41fr));
-grid-gap:20px;
+gap: 20px;
 margin-top:60px;
 z-index:0;
 padding:-200px;
 width:auto;
 }
+
 .container-values .cardbox{
 position:relative;
 height:225px;
@@ -470,10 +470,25 @@ font-size:35px;
 text-align:center;
 margin-top:20px;
 }
+
 .cards{
     display: grid;
-    grid-template-columns: repeat(2, minmax(92px,1fr));
+    grid-template-columns: repeat(2, minmax(92px,2fr));
     gap: 10px;
+}
+@media only screen and (max-width:610px){
+    .cards{
+        display: flex;
+        flex-direction: column;
+        flex-flow: wrap;
+        align-items: center;
+        justify-content:space-around;   
+    }
+    .icon i{
+        font-size:90px;
+        z-index:1;
+        padding:10px 30px  10px 0  ;
+    }
 }
 .contact{
 background-color:var(--orange);

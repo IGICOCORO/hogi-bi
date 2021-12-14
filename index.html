@@ -137,17 +137,17 @@
             </div>
             <template x-for="item,i in codeonlytitleT.length" >
                 <div class="card1-code" >
-                <div class="pic">
-                    <img :src="Images[i]" alt="">
+                    <div class="pic">
+                        <img :src="Images[i]" alt="">
+                    </div>
+                    <div class="text">
+                        <p>
+                            <span id="code1" x-text="dict[lang][codeonlytitleT[item-1]]"></span>
+                            <br>
+                            <br>
+                            <span x-text="dict[lang][codeonlydescrT[item-1]]"></span>.</p>
+                    </div>
                 </div>
-                <div class="text">
-                    <p>
-                        <span id="code1" x-text="dict[lang][codeonlytitleT[item-1]]"></span>
-                        <br>
-                        <br>
-                        <span x-text="dict[lang][codeonlydescrT[item-1]]"></span>.</p>
-                </div>
-            </div>
             </template>
         </div>
         <div class="udev">
@@ -155,7 +155,7 @@
                 <p x-text="dict[lang]['handwithudev']"></p>
             </div>
             <div class="button">
-                <a href="">
+                <a href="https://www.facebook.com/umufundi/">
                     <button x-text="dict[lang]['moreinfos']"><i class="fas fa-mouse-pointer">
                         </i>
                     </button>
