@@ -31,10 +31,10 @@
                         <div class="menu">
                             <template  x-for="(item,i) in menus">
                                 <ul class="menuItem" >
-                                    <li>
+                                    <li class="listItem">
                                     <a class="links" :href="`#${menus[i]}`">
                                         <i :class="icons[i]"></i>
-                                        <p :style="{'padding-left':15 +'px'}" x-text="dict[lang][item]"></p>
+                                        <p x-text="dict[lang][item]"></p>
                                     </a>
                                 </li>
                                 </ul>
@@ -42,7 +42,7 @@
                             <div class="lang-menu">
                                 <div class="selected-lang">
                                     <img class="selectlang" :src="getFlags(lang)" width="25" height="15">
-                                    <p x-text="dict[lang]['lang']"></p>
+                                    <p  x-text="dict[lang]['lang']"></p>
                                 </div>
                                 <ul class="flags">
                                     <li class="flagname" @click="lang='en'">
@@ -66,6 +66,11 @@
                                 </ul>
                             </div>
                         </div>
+                            <input type="checkbox" id="check">
+                                <label for="check">
+                                    <i class="fas fa-bars" id="btn"></i>
+                                    <i class="fas fa-times" id="cancel"></i>
+                                </label>
                     </div>
                 </div>
             </nav>
@@ -101,8 +106,7 @@
                     </div>
                     <div class="button-contact">
                         <a href="">
-                            <button>Get in touch<i class="far fa-envelope">
-                                </i>
+                            <button class="touch"><p x-text="dict[lang]['gtouch']"></p><i class="far fa-envelope"></i>
                             </button>
                         </a>
                     </div>
@@ -123,7 +127,7 @@
                                     <span x-text="dict[lang][valTechdescr[i]]"></span>
                                 </div>
                                 <div class="icon" :style="{ 'background-color':backIcon[i]}">
-                                    <i :class="Fafa[i]"></i>
+                                    <i :class="Fafa[i]" :style="{'font-size':90 +'px'}"></i>
                                 </div>
                             </div>
                         </div>
@@ -156,8 +160,7 @@
             </div>
             <div class="button">
                 <a href="https://www.facebook.com/umufundi/">
-                    <button x-text="dict[lang]['moreinfos']"><i class="fas fa-mouse-pointer">
-                        </i>
+                    <button x-text="dict[lang]['moreinfos']"><i class="fas fa-mouse-pointer"></i>
                     </button>
                 </a>
             </div>
@@ -173,7 +176,7 @@
                             <img src="./image/incognito.jpg" alt="">
                         </div>
                         <h1>Incogito</h1>
-                        <p>Manager de projets</p>
+                        <p x-text="dict[lang]['PM']"></p>
                         <div class="icons">
                             <div class="facebook">
                                 <a href="">
@@ -200,7 +203,7 @@
                             <img src="./image/yuda.jpg" alt="">
                         </div>
                         <h1>Yuda</h1>
-                        <p>Designer Graphique et Motion</p>
+                        <p x-text="dict[lang]['GMD']" ></p>
                         <div class="icons">
                             <div class="facebook">
                                 <a href="https://www.facebook.com/juda.inno" target="blank">
@@ -227,7 +230,7 @@
                             <img src="./image/konstructor.jpg" alt="">
                         </div>
                         <h1>Nkurunziza</h1>
-                        <p>Architecte et developpeur</p>
+                        <p x-text="dict[lang]['ArchDev']"></p>
                         <div class="icons">
                             <div class="whatsapp">
                                 <a href="https://twitter.com/St_yuda1" target="blank">
@@ -254,7 +257,7 @@
                             <img src="./image/artcalo.jpg" alt="">
                         </div>
                         <h1>Artcal'o</h1>
-                        <p>developpeur</p>
+                        <p x-text="dict[lang]['dev']"></p>
                         <div class="icons">
                             <div class="facebook">
                                 <a href="https://www.facebook.com/carmel.niyungeko" target="blank">
@@ -281,7 +284,7 @@
                             <img src="./image/shwaib.jpg" alt="">
                         </div>
                         <h1>Shwaïb LeBon</h1>
-                        <p>Developpeur Web</p>
+                        <p x-text="dict[lang]['dev']"></p>
                         <div class="icons">
                             <div class="facebook">
                                 <a href="https://www.facebook.com/ndabashinze.shwaib" target="blank">
@@ -308,7 +311,7 @@
                             <img src="./image/tony.jpg" alt="">
                         </div>
                         <h1>TonyBim</h1>
-                        <p>Designer Graphique et Motion</p>
+                        <p x-text="dict[lang]['GMD']"></p>
                         <div class="icons">
                             <div class="facebook">
                                 <a href="https://www.facebook.com/profile.php?id=100009844923833" target="blank"> <i class="fab fa-facebook-f">
@@ -336,7 +339,7 @@
                             </a>
                         </div>
                         <h1>Mtl. Nsanzumukiza</h1>
-                        <p>Manager de projets assistant</p>
+                        <p x-text="dict[lang]['APM']"></p>
                         <div class="icons">
                             <div class="facebook">
                                 <a href="https://www.facebook.com/thierry.nsanzumukiza.3" target="blank">
@@ -363,7 +366,7 @@
                             <img src="./image/dezos.jpg" alt="">
                         </div>
                         <h1>Dezos</h1>
-                        <p>Programmeur</p>
+                        <p x-text="dict[lang]['dev']"></p>
                         <div class="icons">
                             <div class="facebook">
                                 <a href="">
@@ -389,7 +392,7 @@
                             <img src="./image/guy.jpg" alt="">
                         </div>
                         <h1>Guy-Michel</h1>
-                        <p>Developpeur</p>
+                        <p x-text="dict[lang]['dev']"></p>
                         <div class="icons">
                             <div class="twitter">
                                 <a href="https://twitter.com/GBstallman">
@@ -458,13 +461,13 @@
                 <div class="contact-part">
                     <div class="part1">
                         <div class="part1box">
-                            <h1>Phone</h1>
+                            <h1 x-text="dict[lang]['phone']"></h1>
                             <a href="tel:+25776161970">
                                 <p>+257 75 20 22 31</p>
                             </a>
                         </div>
                         <div class="part1box">
-                            <h1>E-mail</h1>
+                            <h1 x-text="dict[lang]['emailfrom']"></h1>
                             <a href="mailto:contact@hogi.bi">
                                 <p>contact@hogi.bi</p>
                             </a>
@@ -472,25 +475,25 @@
                     </div>
                     <div class="part2">
                         <div class="form">
-                            <label for="">Addresse e-mail:</label>
+                            <label x-text="dict[lang]['email']" for=""></label>
                             <br>
                             <input type="email" placeholder="">
                             <br>
-                            <p>We'll never share your email with anyone else.</p>
+                            <p x-text="dict[lang]['formchamps']"></p>
                             <br>
-                            <label for="">Nom: </label>
+                            <label x-text="dict[lang]['name']" for=""></label>
                             <br>
                             <input type="text">
                             <br>
                             <br>
-                            <label for="">Message</label>
+                            <label x-text="dict[lang]['message']" for=""></label>
                             <br>
                             <textarea name="" id="" cols="30" rows="10">
                             </textarea>
                             <br>
                             <br>
                             <a href="#">
-                                <button>Envoyer</button>
+                                <button x-text="dict[lang]['send']"></button>
                             </a>
                         </div>
                     </div>
@@ -517,7 +520,8 @@
                 </a>
             </div>
             <div class="copyright">
-                <p>© Copyright 2021 | HOGI. All Rights Reserved. </p>
+                ©<p x-text="dict[lang]['cp']"></p>  <p>2021 | HOGI.</p>
+                <p x-text="dict[lang]['droit']"> All Rights Reserved. </p>
             </div>
         </div>
     </div>

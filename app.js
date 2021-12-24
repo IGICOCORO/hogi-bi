@@ -6,9 +6,9 @@ document.addEventListener('alpine:init',() => {
 		'codeonlytitleT':['comprehensKey','codeuniversal','dowhatulov'],
 		'codeonlydescrT':['comprehensKeyDesc','codeuniversaldescr','dowhatulovdescr'],
 		'icons':['fas fa-code','fas fa-user-friends', 'far fa-envelope', 'fas fa-phone'],
-		'Images':['./image/code.jpg','./image/code1.jpg','./image/code2.jpg'],
+		'Images':['./image/code1.jpg','./image/code.jpg','./image/code2.jpg'],
 		'Fafa':[ 'fa fa-key','fas fa-rocket','fas fa-box-open','fas fa-palette'],
-		'backIcon':['#fcec58','#468bcd','#ff5555','#7dd147'],
+		'backIcon':['#ffe161','#6592e6','#ff6666','#6dd870'],
 		'lang':"en",
 		'dict':{
 			'en':{
@@ -36,7 +36,22 @@ document.addEventListener('alpine:init',() => {
 				'handwithudev':"Who we are without   community? We work hand in hand with UDEV TEAM.Do what you love, love what you do",
 				'moreinfos':"More infos about UDEV Team",
 				'titlequipe':"Our team",
-				'titlecontact':"Contact-Us"	
+				'titlecontact':"Contact Us",	
+				'dev':"Developer",
+				'APM':"Assistant Project Manager",
+				'ArchDev':"Architect & Developper",
+				'GMD':"Graphic and Motion Designer",
+				'PM':"Project Manager",
+				'cp':"Copyright",
+				'formchamps':"We'll never share your email with anyone else.",
+				'send':"Submit",
+				'email':"Email Address:",
+				'emailfrom':"Email",
+				'name':"Name:",
+				'message':"Message",
+				'phone':"Phone",
+				'droit':"All right reserved.",
+				'gtouch':"Get in touch"
 				},
 				'fr':{
 				'lang':"Français",
@@ -63,8 +78,22 @@ document.addEventListener('alpine:init',() => {
 				'handwithudev':"Qui sommes-nous sans communauté ? Nous travaillons main dans la main avec UDEV TEAM.",
 				'moreinfos':"infos sur UDEV Team",
 				'titlequipe':"Notre equipe",
-				'titlecontact':"Contact-Nous"	
-
+				'titlecontact':"Contact Nous",	
+				'dev':"Développeur",
+				'APM':"Assistant du chef de projet",
+				'ArchDev':"Architecte & Développeur",
+				'GMD':"Graphiste et Motion Designer",
+				'PM':"Chef de Projet",
+				'cp':"droits d'auteur",
+				'formchamps':"Nous ne partagerons jamais votre e-mail avec quelqu'un d'autre.",
+				'send':"Envoyer",
+				'emailfrom':"Email",
+				'email':"Adresse e-mail",
+				'name':"Nom",
+				'message':"Message",
+				'phone':"Téléphone",
+				'droit':"Tous droits réservés.",
+				'gtouch':"Entrer en contact"
 			},
 			'rn':{
 				'lang':"Kirundi",
@@ -91,7 +120,22 @@ document.addEventListener('alpine:init',() => {
 				'handwithudev':"Turi bande ata muryango? Dukorana ubudahengeshanya na UDEV Team.",
 				'moreinfos':"Menya vyinshi kuri UDEV Team.",
 				'titlequipe':"Umuryango wacu",
-				'titlecontact':"Turondere"	                              
+				'titlecontact':"Turondere",
+				'dev':"Umuhinyitsi",
+				'APM':"Icariho c'umukuru w'ibikorwa",
+				'ArchDev':"Umwubatse & Umuhinyitsi",
+				'GMD':"Uwushushanya",
+				'PM':"Umuyobozi w'ibikorwa",
+				'cp':"uburenganzira bw'uwabikoze",
+				'formchamps':"Ntabwo tuzigera dusangira imeyi yawe nabandi bose.",
+				'send':"kurungika", 
+				'emailfrom':"Imeyili",
+				'email':"Aderesi ya imeyili ",	        
+				'name':"Izina",
+				'message':"Ubutumwa bugufi.",   
+				'phone':"itelefone",
+				'droit':"Uburenganzira bwose buratwegukiye.",
+				'gtouch':"mushobora kuturondera"                 
 			}
 	
 		},
