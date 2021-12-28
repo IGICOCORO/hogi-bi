@@ -7,7 +7,7 @@ document.addEventListener('alpine:init',() => {
 		'codeonlydescrT':['comprehensKeyDesc','codeuniversaldescr','dowhatulovdescr'],
 		'icons':['fas fa-code','fas fa-user-friends', 'far fa-envelope', 'fas fa-phone'],
 		'Images':['./image/code1.jpg','./image/code.jpg','./image/code2.jpg'],
-		'Fafa':[ 'fa fa-key','fas fa-rocket','fas fa-box-open','fas fa-palette'],
+		'Fafa':[ 'fa fa-key','fas fa-rocket','fas fa-magic','fas fa-palette'],
 		'backIcon':['#ffe161','#6592e6','#ff6666','#6dd870'],
 		'lang':"en",
 		'dict':{

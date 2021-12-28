@@ -6,13 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
      <script src="./app.js" defer></script>
     <script  src="cdn.min.js" defer></script>
+
     <script type="text/javascript">
     window.addEventListener("scroll", function() {
         var header = document.querySelector("nav");
         header.classList.toggle("black", window.scrollY > 0);
     })
+    var TxtRotate = function(el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+  };
+  
+  TxtRotate.prototype.tick = function() {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+  
+    if (this.isDeleting) {
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+  
+    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+  
+    var that = this;
+    var delta = 160 - Math.random() * 100;
+  
+    if (this.isDeleting) { delta /= 5; }
+  
+    if (!this.isDeleting && this.txt === fullTxt) {
+      delta = this.period;
+      this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+      this.isDeleting = false;
+      this.loopNum++;
+      delta = 500;
+    }
+  
+    setTimeout(function() {
+      that.tick();
+    }, delta);
+  };
+  
+  window.onload = function() {
+    var elements = document.getElementsByClassName('txt-rotate');
+    for (var i=0; i<elements.length; i++) {
+      var toRotate = elements[i].getAttribute('data-rotate');
+      var period = elements[i].getAttribute('data-period');
+      if (toRotate) {
+        new TxtRotate(elements[i], JSON.parse(toRotate), period);
+      }
+    }
+    // INJECT CSS
+    var css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+    document.body.appendChild(css);
+  };
     </script>
     <title>HOGI</title>
 </head>
@@ -39,10 +99,15 @@
                                 </li>
                                 </ul>
                             </template>
+                       </div>
+                    
                             <div class="lang-menu">
                                 <div class="selected-lang">
                                     <img class="selectlang" :src="getFlags(lang)" width="25" height="15">
                                     <p  x-text="dict[lang]['lang']"></p>
+                                    <div class="chevron">
+                                        <i class="fas fa-angle-down"></i>
+                                    </div>
                                 </div>
                                 <ul class="flags">
                                     <li class="flagname" @click="lang='en'">
@@ -65,7 +130,7 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>
+                        
                             <input type="checkbox" id="check">
                                 <label for="check">
                                     <i class="fas fa-bars" id="btn"></i>
@@ -84,24 +149,16 @@
                     </div>
                     <div class="paragraph">
                         <div class="wrapper">
-                            <p>We transform </p>
-                            <ul class="dynamic-texts">
-                                <li>
-                                    <span id="text">
-                                        <span id="text1">Problems</span> into <span id="text2">solutions.</span>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span id="text">
-                                        <span id="text1">Issues</span> into <span id="text2">opportunities.</span>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span id="text">
-                                        <span id="text1">Ideas</span> into <span id="text2">reality.</span>
-                                    </span>
-                                </li>
-                            </ul>
+                            
+                            <h1>We transform 
+                                <span
+                                class="txt-rotate"
+                                data-period="2000"
+                                data-rotate='["problems into solutions.", 
+                                "issues into opportunities.", 
+                                "ideas into reality."]'></span>
+                                
+                            </h1>
                         </div>
                     </div>
                     <div class="button-contact">

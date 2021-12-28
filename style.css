@@ -14,15 +14,12 @@
 }
 
 * {
-    font-family: Jost, sans-serif;
+    font-family: 'Jost', sans-serif;
     margin: 0 auto;
     list-style-type: none;
     text-decoration: none;
 }
 
-.texto {
-    margin: 5px;
-}
 
 html {
     scroll-behavior: smooth;
@@ -66,6 +63,14 @@ nav.black .logo img {
     color: black;
     text-decoration: none;
 }
+nav.black .selected-lang{
+    margin-top: -15px;
+} 
+.selected-lang img{
+    height: 15px;
+    width: 25px;
+    border-radius: 5%;
+}
 
 a span:hover {
     color: var(--orange);
@@ -82,13 +87,12 @@ nav.black .menu {
 }
 
 .menu p {
-    padding: 0px 20px 0px 20px;
+    padding: 0px 20px 0px 10px;
     font-weight: bold;
 }
 
 .menu i {
     color: var(--orange);
-    padding: 0px 13px 0px 13px;
     font-size: 19px;
 }
 
@@ -101,9 +105,10 @@ nav.black .menu {
 
 /* ------------------END NAVBAR----------------------- */
 .img {
-    background-image: url(./image/img4.webp);
+    background-image: url(./image/background.jpg);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position:center;
+    background-size: cover;
     width: 100%;
     height: 600px;
     background-attachment: fixed;
@@ -112,15 +117,15 @@ nav.black .menu {
 .text {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 160px;
+    margin-top: 200px;
     text-align: center;
     color: var(--yellow);
 }
 
 .text h1 {
-    font-size: 80px;
-    font-family: arial;
-    font-weight: 900;
+    font-size: 70px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
 }
 
 .paragraph {
@@ -129,79 +134,15 @@ nav.black .menu {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    margin-top: 20px;
 }
-
-.wrapper {
-    display: inline-flex;
-}
-
-.paragraph p {
-    font-size: 40px;
-    font-family: arial;
-    font-weight: 900;
+.wrapper h1{
     color: var(--white);
+    font-size: 42px;
 }
-
-.dynamic-texts {
-    margin-left: -30px;
-    margin-top: -22px;
-    height: 80px;
-    line-height: 90px;
-    overflow: hidden;
+.wrapper span{
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
 }
-
-.paragraph .dynamic-texts li {
-    color: var(--white);
-    list-style: none;
-    text-align: justify;
-    font-size: 40px;
-    font-weight: bolder;
-    position: relative;
-    top: 0;
-    animation: slide 9s steps(3) infinite;
-}
-
-@keyframes slide {
-    100% {
-        top: -270px;
-    }
-}
-
-.paragraph .dynamic-texts li #text1 {
-    color: var(--orange);
-}
-
-.paragraph .dynamic-texts li #text2 {
-    color: var(--yellow);
-}
-
-.paragraph .dynamic-texts li span {
-    position: relative;
-}
-
-.paragraph .dynamic-texts li #text::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-image: url(./image/img4.webp);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    border-left: 3px solid var(--blue);
-    animation: typing 3s steps(10) infinite;
-}
-
-@keyframes typing {
-    100% {
-        left: 100%;
-        margin: 0 -35px 0 65px;
-    }
-}
-
 #orange {
     color: var(--orange);
 }
@@ -217,8 +158,9 @@ nav.black .menu {
 }
 
 .button-contact button {
-    padding: 13px 40px 13px 40px;
-    background-color: var(--green);
+    padding: 13px 20px 13px 20px;
+    background-color: var(--blue);
+    box-shadow: 0px 2px 5px 0px black;
     border: none;
     border-radius: 3px;
     color: var(--white);
@@ -229,6 +171,7 @@ nav.black .menu {
 .button-contact i {
     color: var(--yellow);
     font-size: 20px;
+    margin-left: 12px;
 }
 
 .valeurs {
@@ -245,6 +188,9 @@ nav.black .menu {
     background-color: var(--grey);
     padding: 100px;
 }
+.card1-code .text p{
+    margin: 0 auto;
+}
 
 .title-code {
     text-align: center;
@@ -258,7 +204,7 @@ nav.black .menu {
 
 .card1-code .text p {
     text-align: justify;
-    margin: -100px 80px 20px 80px;
+    margin: -160px 80px 20px 80px;
     color: black;
 }
 
@@ -330,7 +276,7 @@ nav.black .menu {
     width: 82vw;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    grid-gap: 50px;
+    grid-gap: 48px;
     padding: 50px;
     z-index: 0;
 }
@@ -442,7 +388,7 @@ nav.black .menu {
 .container-values {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(520px, 41fr));
-    gap: 20px;
+    gap: 40px;
     margin-top: 60px;
     z-index: 0;
     padding: -200px;
@@ -451,18 +397,29 @@ nav.black .menu {
 
 .container-values .cardbox {
     position: relative;
-    height: 225px;
+    height: 265px;
     box-shadow: 0 30px 30px rgba(0, 0, 0, 0, 4);
     overflow: hidden;
-    width: 540px;
+    width: 490px;
     background-color: var(--white);
-    border-radius: 6px;
+    border-radius: 3px;
 }
 
 .container-values .cardbox p {
-    margin-right: 3px;
+    margin-right: 30px;
     padding: 5px;
     font-size: 14px;
+
+}
+
+.texto {
+    margin-left: 15px;
+    font-weight: 300;
+    line-height: 24px;
+    margin-bottom: 60px;
+}
+.texto .x-text{
+    font-weight: 200;
 }
 
 .container-values .cardbox .icon i {
@@ -481,9 +438,9 @@ nav.black .menu {
 
 .container-values .cardbox .icon3 i {
     color: var(--white);
-    font-size: 73px;
+    font-size: 3px;
     z-index: 1;
-    adding: 100px 50px 100px 50px;
+    padding: 100px 50px 100px 50px;
 }
 
 .container-values .cardbox .icon4 i {
@@ -491,6 +448,10 @@ nav.black .menu {
     font-size: 90px;
     z-index: 1;
     padding: 100px 50px 100px 50px;
+    display: none;
+}
+.fa-box-open {
+    font-size: 40px;
 }
 
 .cardbox {
@@ -521,13 +482,13 @@ nav.black .menu {
 }
 
 .cardpic {
-    width: 282vw;
+    width: 182vw;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(540px, 1fr));
-    grid-gap: 20px;
+    grid-gap: 30px;
     margin-top: 30px;
     z-index: 0;
-    width: 85%;
+    width: 100%;
     padding: 0px 0px 130px 0px;
 }
 
@@ -559,6 +520,7 @@ nav.black .menu {
     grid-template-columns: repeat(2, minmax(92px, 2fr));
     gap: 10px;
 }
+    
 
 @media only screen and (max-width: 610px) {
     .cards {
@@ -592,7 +554,7 @@ nav.black .menu {
 
 .part1box {
     background-color: var(--white);
-    padding: 55px 120px 55px 120px;
+    padding: 20px 140px 20px 140px;
     border-radius: 10px;
     margin: 0px 0px 50px 0px;
 }
@@ -623,7 +585,7 @@ nav.black .menu {
 
 .part2 .form textarea {
     border: none;
-    height: 130px;
+    height: 100px;
     width: 400px;
     border-radius: 5px;
 }
@@ -681,6 +643,7 @@ nav.black .menu {
     .paragraph .wrapper p {
         font-size: 18px;
         margin-top: 10px;
+        font-family: 'Jost', sans-serif;
     }
 
     .paragraph .dynamic-texts li {
@@ -820,18 +783,25 @@ nav.black .menu {
 
 .lang-menu {
     width: 100px;
-    bottom: 5px;
+    margin-top: 35px;
+    bottom: 8px;
+    left:40px;
     text-align: right;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     position: relative;
+    cursor: pointer;
 }
-
+.lang-menu .selected-lang:hover{
+    transition: .5s;
+    color: var(--orange);
+}
 .lang-menu .selected-lang {
     display: flex;
     justify-content: space-between;
     line-height: 2;
     cursor: pointer;
+ 
 }
 
 .lang-menu .selected-lang:before {
@@ -839,11 +809,13 @@ nav.black .menu {
     display: inline-block;
     width: 32px;
     height: 32px;
-    background-image: url('./image/ENGLISH.jpg');
+    /* background-image: url('./image/ENGLISH.jpg'); */
     background-size: contain;
     background-repeat: no-repeat;
 }
-
+.chevron{
+    padding-left: 5px;
+}
 .lang-menu ul {
     margin: 0;
     padding: 0;
