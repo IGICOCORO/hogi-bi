@@ -387,12 +387,19 @@ nav.black .menu {
 
 .container-values {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(520px, 41fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 321fr));
+    grid-gap: 00px;
     margin-top: 60px;
     z-index: 0;
-    padding: -200px;
-    width: auto;
+    padding:0px;
+    width: 100%;
+
+    /* width: 82vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 48px;
+    padding: 50px;
+    z-index: 0; */
 }
 
 .container-values .cardbox {
@@ -520,20 +527,43 @@ nav.black .menu {
     grid-template-columns: repeat(2, minmax(92px, 2fr));
     gap: 10px;
 }
-    
 
-@media only screen and (max-width: 610px) {
+@media only screen and (max-width: 1184px) {
     .cards {
         display: flex;
         flex-direction: column;
-        flex-flow: wrap;
-        align-items: center;
         justify-content: space-around;
+        transition: .15s;
     }
-
+    .container-values{
+        margin-top: 10px;
+    }
+    .container-values .cardbox {
+        height: 235px;
+        box-shadow: 0 30px 30px rgba(0, 0, 0, 0, 4);
+        overflow: hidden;
+        width: 700px;
+        background-color: var(--white);
+        border-radius: 3px;
+    }
+    .container-values .cardbox p {
+        margin-right: 30px;
+        padding: 5px;
+        font-size: 12px;
+    
+    }
+    .texto{
+        font-size: 18px;
+        font-weight: 300;
+    }
+    .cardbox{
+        margin-top: 10px;
+        width: 300px;
+    }
     .icon {
         z-index: 1;
-        padding: 10px 45px 68px 0;
+        font-size: 2px;
+        padding: 30px 30px 30px 30px;
     }
 }
 
@@ -640,43 +670,7 @@ nav.black .menu {
         padding: 0px 0px 80px 0px;
     }
 
-    .paragraph .wrapper p {
-        font-size: 18px;
-        margin-top: 10px;
-        font-family: 'Jost', sans-serif;
-    }
-
-    .paragraph .dynamic-texts li {
-        font-size: 18px;
-    }
-
-    .part1box h1 {
-        font-size: 16px;
-        padding: 10px;
-    }
-
-    .part1box {
-        padding: 20px 100px 20px 100px;
-    }
-
-    .part2 .form input {
-        width: 290px;
-        height: 30px;
-    }
-
-    .part2 .form p {
-        font-size: 10px;
-    }
-
-    .part2 .form button {
-        width: 290px;
-        height: 30px;
-    }
-
-    .part2 .form textarea {
-        width: 290px;
-        height: 70px;
-    }
+   
 }
 
 .footer {
@@ -704,32 +698,43 @@ nav.black .menu {
         display: none;
     }
 }
-
-@media only screen and (max-width: 710px) {
-    .container-values {
+@media only screen and (max-width: 645px) {
+      .container-values {
         display: flex;
         justify-content: center;
         flex-direction: column;
+        margin-top: 90px;
     }
-
-    body {
-        overflow-x: hidden;
-    }
-
+   
     .container-values .cardbox {
-        height: 305px;
-        width: 290px;
+        box-shadow: 0 30px 30px rgba(0, 0, 0, 0, 4);      
+        background-color: var(--white);
+        border-radius: 3px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 90px;
+        
     }
 
     .cardpic .imgbox {
         width: 390px;
     }
 
-    .container-values .cardbox {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
+    .icon{
+        width: 100%;
+        padding: 10px 10px 10px 10px;
+        
     }
+    .cardbox .icon i{
+        text-align: center;
+        padding: 30px 0px 30px 0px;
+    }
+    .texto h3{
+        font-size: 35px;
+        padding:30px 0px 30px 0px;
+    }
+    
 
     .container-values .cardbox .icon i {
         font-size: 25px;
@@ -762,6 +767,7 @@ nav.black .menu {
         font-size: 20px;
     }
 }
+
 
 .lang-menu {
     width: 100px;
@@ -883,43 +889,93 @@ label #cancel {
 }
 
 @media (max-width: 910px) {
+    .container-values .cardbox {
+        height: 235px;
+        box-shadow: 0 30px 30px rgba(0, 0, 0, 0, 4);
+        overflow: hidden;
+        width: 450px;
+        background-color: var(--white);
+        border-radius: 3px;
+    }
+    .container-values .cardbox p {
+        margin-right: 30px;
+        padding: 5px;
+        font-size: 12px;
+    
+    }
+    .texto{
+        transition: 0.5s;
+        font-size: 12px;
+        font-weight: 300;
+    }
+    .cardbox{
+        margin-top: 10px;
+        width: 300px;
+    }
+    .icon {
+        z-index: 1;
+        font-size: 2px;
+        padding: 0px 0px 0px 0px;
+    }
+    .img img{
+        background-size: 400px;
+        visibility: hidden;
+    }
     label #cancel {
         margin-right: 30px;
         line-height: 2;
     }
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+    .lang-menu{
+        margin-right: 210px;
+    }
+
    label #btn{
         display: block;
         margin-right: 30px;
         line-height: 2;
     }
     .menu {
-        position: fixed;
+        position: absolute;
+        visibility: hidden;
+       display: flex;
+       justify-content: center;
+       flex-direction: column;
         width: 100%;
         height: 100vh;
         background: #fff;
-        top: 80px;
+        top: 60px;
         text-align: center;
-        transition:.5s;
-        display: none;
+        left: 0;
+        right: 0;
+        
     }
+    
+    nav.black .menu{
+        left: 0;
+      
+    }
+    
 
     nav .menu .listItem {
         display: block;
-        margin: 50px 0;
-        line-height: 30px;
+        margin: 40px 0;
+        line-height: 0px;
     }
 
     nav .menu .listItem a {
         font-size: 20px;
     }
-
-    #check:checked~.menu {
-        left: 0;
-    }
-
     #check:checked~label #btn {
         display: none;
         transition: .4s;
+    }
+    #check:checked~.menu{
+       display: flex;
+       justify-content: center;
     }
     #check:checked~label #cancel {
         display: block;

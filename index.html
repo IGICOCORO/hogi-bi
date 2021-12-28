@@ -73,6 +73,7 @@
     css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
     document.body.appendChild(css);
   };
+
     </script>
     <title>HOGI</title>
 </head>
@@ -179,13 +180,14 @@
                     <template  x-for="item,i in valTechtitle">
                         <div class="container-values">
                             <div class="cardbox">
+                                <div class="icon" :style="{ 'background-color':backIcon[i]}">
+                                    <i :class="Fafa[i]" :style="{'font-size':90 +'px'}"></i>
+                                </div>
                                 <div class="texto">
                                     <h3 :style="{ 'color':backIcon[i]}" x-text="dict[lang][valTechtitle[i]]"></h3><br>
                                     <span x-text="dict[lang][valTechdescr[i]]"></span>
                                 </div>
-                                <div class="icon" :style="{ 'background-color':backIcon[i]}">
-                                    <i :class="Fafa[i]" :style="{'font-size':90 +'px'}"></i>
-                                </div>
+                               
                             </div>
                         </div>
                     </template>
