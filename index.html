@@ -1,147 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="menu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
-     <script src="./app.js" defer></script>
-    <script  src="cdn.min.js" defer></script>
-
+    <!-- <script src="./app.js" defer></script>
+    <script  src="cdn.min.js" defer></script> -->
     <script type="text/javascript">
-    window.addEventListener("scroll", function() {
-        var header = document.querySelector("nav");
-        header.classList.toggle("black", window.scrollY > 0);
-    })
-    var TxtRotate = function(el, toRotate, period) {
-    this.toRotate = toRotate;
-    this.el = el;
-    this.loopNum = 0;
-    this.period = parseInt(period, 10) || 2000;
-    this.txt = '';
-    this.tick();
-    this.isDeleting = false;
-  };
-  
-  TxtRotate.prototype.tick = function() {
-    var i = this.loopNum % this.toRotate.length;
-    var fullTxt = this.toRotate[i];
-  
-    if (this.isDeleting) {
-      this.txt = fullTxt.substring(0, this.txt.length - 1);
-    } else {
-      this.txt = fullTxt.substring(0, this.txt.length + 1);
-    }
-  
-    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-  
-    var that = this;
-    var delta = 160 - Math.random() * 100;
-  
-    if (this.isDeleting) { delta /= 5; }
-  
-    if (!this.isDeleting && this.txt === fullTxt) {
-      delta = this.period;
-      this.isDeleting = true;
-    } else if (this.isDeleting && this.txt === '') {
-      this.isDeleting = false;
-      this.loopNum++;
-      delta = 500;
-    }
-  
-    setTimeout(function() {
-      that.tick();
-    }, delta);
-  };
-  
-  window.onload = function() {
-    var elements = document.getElementsByClassName('txt-rotate');
-    for (var i=0; i<elements.length; i++) {
-      var toRotate = elements[i].getAttribute('data-rotate');
-      var period = elements[i].getAttribute('data-period');
-      if (toRotate) {
-        new TxtRotate(elements[i], JSON.parse(toRotate), period);
-      }
-    }
-    // INJECT CSS
-    var css = document.createElement("style");
-    css.type = "text/css";
-    css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
-    document.body.appendChild(css);
-  };
 
+        window.addEventListener("scroll",function(){
+            var header = document.querySelector("nav");
+            header.classList.toggle("black", window.scrollY > 0);
+        })
     </script>
-    <title>HOGI</title>
 </head>
-
 <body>
-    <div x-data="app">
-        <div class="container">
-            <nav>
-                <div class="header">
-                    <div class="navbar">
-                        <div class="logo">
-                            <a href="index.html">
-                                <img src="./image/logo1.png" alt="">
-                            </a>
-                        </div>
-                        <div class="menu">
-                            <template  x-for="(item,i) in menus">
-                                <ul class="menuItem" >
-                                    <li class="listItem">
-                                    <a class="links" :href="`#${menus[i]}`">
-                                        <i :class="icons[i]"></i>
-                                        <p x-text="dict[lang][item]"></p>
-                                    </a>
-                                </li>
-                                </ul>
-                            </template>
-                       </div>
-                    
-                            <div class="lang-menu">
-                                <div class="selected-lang">
-                                    <img class="selectlang" :src="getFlags(lang)" width="25" height="15">
-                                    <p  x-text="dict[lang]['lang']"></p>
-                                    <div class="chevron">
-                                        <i class="fas fa-angle-down"></i>
-                                    </div>
-                                </div>
-                                <ul class="flags">
-                                    <li class="flagname" @click="lang='en'">
-                                        <a class="en">
-                                            <img class="flag" src="./image/ENGLISH.jpg" alt="Image Load Error" width="25" height="15" />
-                                            English
-                                        </a>
-                                    </li>
-                                    <li class="flagname" @click="lang='fr'">
-                                        <a class="fr">
-                                            <img class="flag" src="./image/FRENCH.jpg" alt="Image Load Error" width="25" height="15" />
-                                            French
-                                        </a>
-                                    </li>
-                                    <li class="flagname" @click="lang='rn'">
-                                        <a class="ki">
-                                            <img class="flag" src="./image/KIRUNDI.jpg" alt="Image Load Error" width="25" height="15" />
-                                            Kirundi
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        
-                            <input type="checkbox" id="check">
-                                <label for="check">
-                                    <i class="fas fa-bars" id="btn"></i>
-                                    <i class="fas fa-times" id="cancel"></i>
-                                </label>
-                    </div>
+    <div>   
+    <div class="container">
+    <nav>
+        <div class="header">
+            <div class="navbar">
+                <input id="nav-toggle"  type="checkbox" name="">
+                <div class="logo">
+                    <a href="hogi.html"><img  src="./image/logo1.png" alt=""></a>
                 </div>
-            </nav>
+                <ul class="links">
+                    <li><a href=""><i class="fas fa-code"></i><p>Valeurs</p></a></li>
+                    <li><a href=""><i class="fas fa-user-friends"></i> <p>Team</p></a></li>
+                    <li><a href=""><i class="fas fa-envelope"></i><p> Portfolio</p></a></li>
+                    <li><a href=""><i class="fas fa-phone"></i><p> Contact</p></a></li>
+                    <li><a class="lang-menu">
+                        <img src="./image/ENGLISH.jpg" width="25" height="15">English 
+                        <i class="fas fa-angle-down"></i></a>
+                    </li>
+                </ul>
+                <label for="nav-toggle" class="icon-burger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </label>
+            </div>
         </div>
-        <div class="title_part">
+    </nav>
+      <div class="title_part">
             <div class="home">
                 <div class="img">
                     <img src="" alt="">
@@ -150,442 +54,379 @@
                     </div>
                     <div class="paragraph">
                         <div class="wrapper">
-                            
-                            <h1>We transform 
-                                <span
-                                class="txt-rotate"
-                                data-period="2000"
-                                data-rotate='["problems into solutions.", 
-                                "issues into opportunities.", 
-                                "ideas into reality."]'></span>
-                                
-                            </h1>
+                            <p>We transform </p>
+                            <ul class="dynamic-texts">
+                                <li>
+                                    <span id="text">
+                                        <span id="text1">Problems</span> into <span id="text2">solutions.</span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span id="text">
+                                        <span id="text1">Issues</span> into <span id="text2">opportunities.</span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span id="text">
+                                        <span id="text1">Ideas</span> into <span id="text2">reality.</span>
+                                    </span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div class="button-contact">
                         <a href="">
-                            <button class="touch"><p x-text="dict[lang]['gtouch']"></p><i class="far fa-envelope"></i>
+                            <button>Get in touch<i class="far fa-envelope">
+                                </i>
                             </button>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div :id="menus[0]">
+         <div id="values">
             <div class="valeurs">
                 <div class="title">
-                    <h1 x-text="dict[lang]['techvalue']"></h1>
+                    <h1>Nos valeurs techniques</h1>
                 </div>
                 <div class="cards">
-                    <template  x-for="item,i in valTechtitle">
-                        <div class="container-values">
-                            <div class="cardbox">
-                                
-                                <div class="texto">
-                                    <h3 :style="{ 'color':backIcon[i]}" x-text="dict[lang][valTechtitle[i]]"></h3><br>
-                                    <span x-text="dict[lang][valTechdescr[i]]"></span>
-                                </div>
-                                <div class="icon" :style="{ 'background-color':backIcon[i]}">
-                                    <i :class="Fafa[i]" :style="{'font-size':90 +'px'}"></i>
-                                </div>
-                               
+                    <div class="container-values">
+                        <div class="cardbox">
+                            <p>La sécurité est notre priorité<br><br>Nous résolvons des problèmes complexes en utilisant une solution simple et puissante.
+                                Simple != Facile</p>
+                        <div class="icon">
+                                <i class="fa fa-key"></i>
                             </div>
                         </div>
-                    </template>
+
+                        <div class="cardbox">
+                            <p>La performance est la clé<br><br>Personne n'aime un long temps de chargement. Nous optimisons chaque ressource pour vous faire gagner du temps avec des
+                                applications ultra-rapides </p>
+                            <div class="icon2">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                        </div>                       
+                    </div>
+
+                    <div class="container-values">
+                        <div class="cardbox">
+                            <p>La simplicité est notre langage<br><br>Pourquoi donner un visuel peu attractif quand on peut faire exactement le contraire ? Nous sommes cool, intelligents, flexibles et nous aimons le design génial</p>
+                            <div class="icon3">
+                                <i class="fas fa-box-open"></i>
+                            </div>
+                        </div>
+
+                        <div class="cardbox">
+                            <p>Un design génial est notre plaisir<br><br>Pourquoi donner un visuel peu attractif quand on peut faire exactement le contraire ? Nous sommes cool, intelligents, flexibles et nous aimons le design génial</p>
+                            <div class="icon4">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="codes">
+<div class="codes">
             <div class="title-code">
-                <p x-text="dict[lang]['codeonlytitle']"></p>
+                <p>le code seul ne suffit pas</p>
             </div>
-            <template x-for="item,i in codeonlytitleT.length" >
-                <div class="card1-code" >
-                    <div class="pic">
-                        <img :src="Images[i]" alt="">
-                    </div>
-                    <div class="text">
-                        <p>
-                            <span id="code1" x-text="dict[lang][codeonlytitleT[item-1]]"></span>
-                            <br>
-                            <br>
-                            <span x-text="dict[lang][codeonlydescrT[item-1]]"></span>.</p>
-                    </div>
+            <div class="card1-code">
+                <div class="pic">
+                    <img src="./image/code1.jpg" alt="">
                 </div>
-            </template>
+                <div class="text">
+                    <p><span id="code1">La compréhension est la clé </span>
+                        <br><br> Au clavier, nous écrivons quelques lignes de </code> mais en réalité, nous résolvons des problèmes.
+                        Une meilleure compréhension du problème affecte la pertinence de la solution.
+                        La compréhension est <strong>notre objectif</strong>.</p>
+                </div>
+            </div>
+            <div class="card1-code">
+                <div class="pic">
+                    <img src="./image/code.jpg" alt="">
+                </div>
+                <div class="text">
+                    <p><span id="code1">Le code est universel, les utilisateurs sont différents</span>
+                        <br><br> Nous utilisons les mêmes langages de programmation, le même framework, les mêmes bibliothèques et outils mais nous résolvons pour différents clients avec des cibles différentes.
+                        <strong>nous personnalisons</strong> au besoin.</p>
+                </div>
+            </div>
+            <div class="card1-code">
+                <div class="pic">
+                    <img src="./image/code2.jpg" alt="">
+                </div>
+                <div class="text">
+                    <p><span id="code1">Fais ce que tu aimes, aime ce que tu fais</span>
+                        <br><br> Chaque membre de l'équipe a passé plus de 5 ans à étudier et à travailler sur différents projets juste pour le plaisir. Pour nous, la programmation est loin d'être le moyen de gagner de l'argent, la programmation fait partie de notre vie, <strong>c'est notre bonheur.</strong></p>
+                </div>
+            </div>
         </div>
         <div class="udev">
             <div class="title">
-                <p x-text="dict[lang]['handwithudev']"></p>
+                <p>Qui sommes-nous sans communauté ? Nous travaillons main dans la main avec UDEV TEAM.</p>
             </div>
             <div class="button">
-                <a href="https://www.facebook.com/umufundi/">
-                    <button x-text="dict[lang]['moreinfos']"><i class="fas fa-mouse-pointer"></i>
-                    </button>
-                </a>
+                <a href=""><button>Infos sur UDEV Team<i class="fas fa-mouse-pointer"></i></button></a>
             </div>
         </div>
-        <div :id="menus[1]">
-            <div class="team">
-                <div class="title">
-                    <p x-text="dict[lang]['titlequipe']"></p>
-                </div>
-                <div class="container-img">
-                    <div class="box">
-                        <div class="imgbox">
-                            <img src="./image/incognito.jpg" alt="">
-                        </div>
-                        <h1>Incogito</h1>
-                        <p x-text="dict[lang]['PM']"></p>
-                        <div class="icons">
-                            <div class="facebook">
-                                <a href="">
-                                    <i class="fab fa-facebook-f">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="twitter">
-                                <a href="https://twitter.com/prime_Ikiza" target="blank">
-                                    <i class="fab fa-twitter">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="whatsapp">
-                                <a href="https://api.whatsapp.com/send?phone=25768900800" target="blank">
-                                    <i class="fab fa-whatsapp">
-                                    </i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="imgbox">
-                            <img src="./image/yuda.jpg" alt="">
-                        </div>
-                        <h1>Yuda</h1>
-                        <p x-text="dict[lang]['GMD']" ></p>
-                        <div class="icons">
-                            <div class="facebook">
-                                <a href="https://www.facebook.com/juda.inno" target="blank">
-                                    <i class="fab fa-facebook-f">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="twitter">
-                                <a href="https://behance.com/sangweno2cd4" target="blank">
-                                    <i class="fab fa-behance">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="twitter">
-                                <a href="https://twitter.com/St_yuda1" target="blank">
-                                    <i class="fab fa-twitter">
-                                    </i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="imgbox">
-                            <img src="./image/konstructor.jpg" alt="">
-                        </div>
-                        <h1>Nkurunziza</h1>
-                        <p x-text="dict[lang]['ArchDev']"></p>
-                        <div class="icons">
-                            <div class="whatsapp">
-                                <a href="https://twitter.com/St_yuda1" target="blank">
-                                    <i class="fab fa-whatsapp">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="twitter">
-                                <a href="https://twitter.com/inganzamarumpu" target="blank">
-                                    <i class="fab fa-twitter">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="twitter">
-                                <a href="https://github.com/inganzamarumpu" target="blank">
-                                    <i class="fab fa-github">
-                                    </i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="imgbox">
-                            <img src="./image/artcalo.jpg" alt="">
-                        </div>
-                        <h1>Artcal'o</h1>
-                        <p x-text="dict[lang]['dev']"></p>
-                        <div class="icons">
-                            <div class="facebook">
-                                <a href="https://www.facebook.com/carmel.niyungeko" target="blank">
-                                    <i class="fab fa-facebook-f">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="twitter">
-                                <a href="https://github.com/ArtcalO97/" target="blank">
-                                    <i class="fab fa-github">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="whatsapp">
-                                <a href="https://api.whatsapp.com/send?phone=25761640457" target="blank">
-                                    <i class="fab fa-whatsapp">
-                                    </i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="imgbox">
-                            <img src="./image/shwaib.jpg" alt="">
-                        </div>
-                        <h1>Shwaïb LeBon</h1>
-                        <p x-text="dict[lang]['dev']"></p>
-                        <div class="icons">
-                            <div class="facebook">
-                                <a href="https://www.facebook.com/ndabashinze.shwaib" target="blank">
-                                    <i class="fab fa-facebook-f">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="twitter">
-                                <a href="https://github.com/shwaiblebon/" target="blank">
-                                    <i class="fab fa-github">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="whatsapp">
-                                <a href="https://api.whatsapp.com/send?phone=25772029330" target="blank">
-                                    <i class="fab fa-whatsapp">
-                                    </i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="imgbox">
-                            <img src="./image/tony.jpg" alt="">
-                        </div>
-                        <h1>TonyBim</h1>
-                        <p x-text="dict[lang]['GMD']"></p>
-                        <div class="icons">
-                            <div class="facebook">
-                                <a href="https://www.facebook.com/profile.php?id=100009844923833" target="blank"> <i class="fab fa-facebook-f">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="twitter">
-                                <a href="https://twitter.com/bimenyimana_b" target="blank">
-                                    <i class="fab fa-twitter">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="whatsapp">
-                                <a href="https://api.whatsapp.com/send?phone=25776161970" target="blank">
-                                    <i class="fab fa-whatsapp">
-                                    </i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="imgbox">
-                            <a href="">
-                                <img src="./image/jovin.jpg" alt="">
-                            </a>
-                        </div>
-                        <h1>Mtl. Nsanzumukiza</h1>
-                        <p x-text="dict[lang]['APM']"></p>
-                        <div class="icons">
-                            <div class="facebook">
-                                <a href="https://www.facebook.com/thierry.nsanzumukiza.3" target="blank">
-                                    <i class="fab fa-facebook-f">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="whatsapp">
-                                <a href="https://www.linkedin.com/in/thierry-jovin-9b8bb1109/" target="blank">
-                                    <i class="fab fa-linkedin-in">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="twitter">
-                                <a href="mailto:nsanzumukizath@gmail.com" target="blank">
-                                    <i class="far fa-envelope">
-                                    </i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="imgbox">
-                            <img src="./image/dezos.jpg" alt="">
-                        </div>
-                        <h1>Dezos</h1>
-                        <p x-text="dict[lang]['dev']"></p>
-                        <div class="icons">
-                            <div class="facebook">
-                                <a href="">
-                                    <i class="fab fa-facebook-f">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="twitter">
-                                <a href="https://github.com/Desire1990/" target="blank"> <i class="fab fa-github">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="whatsapp">
-                                <a href="https://api.whatsapp.com/send?phone=25779462806" target="blank">
-                                    <i class="fab fa-whatsapp">
-                                    </i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="imgbox">
-                            <img src="./image/guy.jpg" alt="">
-                        </div>
-                        <h1>Guy-Michel</h1>
-                        <p x-text="dict[lang]['dev']"></p>
-                        <div class="icons">
-                            <div class="twitter">
-                                <a href="https://twitter.com/GBstallman">
-                                    <i class="fab fa-twitter">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="twitter">
-                                <a href="https://github.com/GBstallman" target="blank">
-                                    <i class="fab fa-github">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="whatsapp">
-                                <a href="https://api.whatsapp.com/send?phone=25768381368" target="blank"> <i class="fab fa-whatsapp">
-                                    </i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+ <div id="equipe">
+        <div class="team">
+            <div class="title">
+                <p>Notre equipe</p>
             </div>
-        </div>
-        <div :id="menus[2]">
-            <div class="portfolio">
-                <div class="title">
-                    <h1 x-text="dict[lang]['portfolio']"></h1>
-                </div>
-                <div class="cardpic">
+            <div class="container-img">
+                <div class="box">
                     <div class="imgbox">
-                        <img src="./image/csdteam.jpg" alt="">
-                        <p>CSD Team</p>
+                        <img src="./image/incognito.jpg" alt="">
                     </div>
-                    <div class="imgbox">
-                        <img src="./image/podika.jpg" alt="">
-                        <p>PODIKA</p>
-                    </div>
-                    <div class="imgbox">
-                        <img src="./image/podika-android.jpg" alt="">
-                        <p>PODIKA App</p>
-                    </div>
-                    <div class="imgbox">
-                        <img src="./image/zero-plastic.jpg" alt="">
-                        <p>Zero Plastic App</p>
-                    </div>
-                    <div class="imgbox">
-                        <img src="./image/hogi-online.jpg" alt="">
-                        <p>HOGI Online</p>
-                    </div>
-                    <div class="imgbox">
-                        <img src="./image/rc-retraining.jpg" alt="">
-                        <p>RC rc-retraining</p>
-                    </div>
-                    <div class="imgbox">
-                        <img src="./image/bimbo.jpg" alt="">
-                        <p>BIMBO Supermarket</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div :id="menus[3]">
-            <div class="contact">
-                <div class="title">
-                    <h1 x-text="dict[lang]['titlecontact']"></h1>
-                </div>
-                <div class="contact-part">
-                    <div class="part1">
-                        <div class="part1box">
-                            <h1 x-text="dict[lang]['phone']"></h1>
-                            <a href="tel:+25776161970">
-                                <p>+257 75 20 22 31</p>
-                            </a>
+                    <h1>Incogito</h1>
+                    <p>Manager de projets</p>
+                    <div class="icons">
+                        <div class="facebook">
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
                         </div>
-                        <div class="part1box">
-                            <h1 x-text="dict[lang]['emailfrom']"></h1>
-                            <a href="mailto:contact@hogi.bi">
-                                <p>contact@hogi.bi</p>
-                            </a>
+                        <div class="twitter">
+                            <a href="https://twitter.com/prime_Ikiza" target="blank"><i class="fab fa-twitter"></i></a>
                         </div>
-                    </div>
-                    <div class="part2">
-                        <div class="form">
-                            <label x-text="dict[lang]['email']" for=""></label>
-                            <br>
-                            <input type="email" placeholder="">
-                            <br>
-                            <p x-text="dict[lang]['formchamps']"></p>
-                            <br>
-                            <label x-text="dict[lang]['name']" for=""></label>
-                            <br>
-                            <input type="text">
-                            <br>
-                            <br>
-                            <label x-text="dict[lang]['message']" for=""></label>
-                            <br>
-                            <textarea name="" id="" cols="30" rows="10">
-                            </textarea>
-                            <br>
-                            <br>
-                            <a href="#">
-                                <button x-text="dict[lang]['send']"></button>
-                            </a>
+                        <div class="whatsapp">
+                            <a href="https://api.whatsapp.com/send?phone=25768900800" target="blank"><i class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="footer">
-            <div class="icons">
-                <a href="#">
-                    <i class="fab fa-facebook-f">
-                    </i>
-                </a>
-                <a href="#">
-                    <i class="fab fa-twitter">
-                    </i>
-                </a>
-                <a href="#">
-                    <i class="fab fa-youtube">
-                    </i>
-                </a>
-                <a href="#">
-                    <i class="fab fa-instagram">
-                    </i>
-                </a>
-            </div>
-            <div class="copyright">
-                ©<p x-text="dict[lang]['cp']"></p>  <p>2021 | HOGI.</p>
-                <p x-text="dict[lang]['droit']"></p>
+                <div class="box">
+                    <div class="imgbox">
+                        <img src="./image/yuda.jpg" alt="">
+                    </div>
+                    <h1>Yuda</h1>
+                    <p>Designer Graphique et Motion</p>
+                    <div class="icons">
+                        <div class="facebook">
+                            <a href="https://www.facebook.com/juda.inno" target="blank"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                        <div class="twitter">
+                           <a href="https://behance.com/sangweno2cd4" target="blank"><i class="fab fa-behance"></i></a> 
+                        </div>
+                        <div class="twitter">
+                            <a href="https://twitter.com/St_yuda1" target="blank"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="imgbox">
+                        <img src="./image/konstructor.jpg" alt="">
+                    </div>
+                    <h1>Nkurunziza</h1>
+                    <p>Architecte et developpeur</p>
+                    <div class="icons">
+                        <div class="whatsapp">
+                            <a href="https://twitter.com/St_yuda1" target="blank"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                        <div class="twitter">
+                            <a href="https://twitter.com/inganzamarumpu" target="blank"><i class="fab fa-twitter"></i></a>
+                        </div>
+                        <div class="twitter">
+                            <a href="https://github.com/inganzamarumpu" target="blank"><i class="fab fa-github"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="imgbox">
+                        <img src="./image/artcalo.jpg" alt="">
+                    </div>
+                    <h1>Artcal'o</h1>
+                    <p>developpeur</p>
+                    <div class="icons">
+                        <div class="facebook">
+                            <a href="https://www.facebook.com/carmel.niyungeko" target="blank"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                        <div class="twitter">
+                            <a href="https://github.com/ArtcalO97/" target="blank"><i class="fab fa-github"></i></a>
+                        </div>
+                        <div class="whatsapp">
+                            <a href="https://api.whatsapp.com/send?phone=25761640457" target="blank"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="imgbox">
+                        <img src="./image/shwaib.jpg" alt="">
+                    </div>
+                    <h1>Shwaïb LeBon</h1>
+                    <p>Developpeur Web</p>
+                    <div class="icons">
+                        <div class="facebook">
+                            <a href="https://www.facebook.com/ndabashinze.shwaib" target="blank"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                        <div class="twitter">
+                            <a href="https://github.com/shwaiblebon/" target="blank"><i class="fab fa-github"></i></a>
+                        </div>
+                        <div class="whatsapp">
+                            <a href="https://api.whatsapp.com/send?phone=25772029330" target="blank"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="imgbox">
+                        <img src="./image/tony.jpg" alt="">
+                    </div>
+                    <h1>TonyBim</h1>
+                    <p>Designer Graphique et Motion</p>
+                    <div class="icons">
+                        <div class="facebook">
+                           <a href="https://www.facebook.com/profile.php?id=100009844923833" target="blank"> <i class="fab fa-facebook-f"></i></a>
+                        </div>
+                        <div class="twitter">
+                            <a href="https://twitter.com/bimenyimana_b" target="blank"><i class="fab fa-twitter"></i></a>
+                        </div>
+                        <div class="whatsapp">
+                            <a href="https://api.whatsapp.com/send?phone=25776161970" target="blank"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="imgbox">
+                        <a href=""><img src="./image/jovin.jpg" alt=""></a>
+                    </div>
+                    <h1>Mtl. Nsanzumukiza</h1>
+                    <p>Manager de projets assistant</p>
+                    <div class="icons">
+                        <div class="facebook">
+                            <a href="https://www.facebook.com/thierry.nsanzumukiza.3" target="blank"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                        <div class="whatsapp">
+                            <a href="https://www.linkedin.com/in/thierry-jovin-9b8bb1109/" target="blank"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <div class="twitter">
+                            <a href="mailto:nsanzumukizath@gmail.com" target="blank"><i class="far fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="imgbox">
+                        <img src="./image/dezos.jpg" alt="">
+                    </div>
+                    <h1>Dezos</h1>
+                    <p>Programmeur</p>
+                    <div class="icons">
+                        <div class="facebook">
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                        <div class="twitter">
+                           <a href="https://github.com/Desire1990/" target="blank"> <i class="fab fa-github"></i></a>
+                        </div>
+                        <div class="whatsapp">
+                            <a href="https://api.whatsapp.com/send?phone=25779462806" target="blank"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="imgbox">
+                        <img src="./image/lionel.jpg" alt="">
+                    </div>
+                    <h1>Jean Lionel</h1>
+                    <p>Programmeur</p>
+                    <div class="icons">
+                        <div class="twitter">
+                            <a href="https://twitter.com/nijeanlionel"><i class="fab fa-twitter"></i></a>
+                        </div>
+                        <div class="twitter">
+                            <a href="https://github.com/jean-lionel" target="blank"><i class="fab fa-github"></i></a>
+                        </div>
+                        <div class="whatsapp">
+                           <a href="https://api.whatsapp.com/send?phone=25779614036" target="blank"> <i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
-   
-</body>
+<div id="port">
+        <div class="portfolio">
+            <div class="title">
+                <h1>Portfolio</h1>
+            </div>
+            <div class="cardpic">
+                <div class="imgbox">
+                    <img src="./image/csdteam.jpg" alt="">
+                        <p>CSD Team</p>
+                </div>
+                <div class="imgbox">
+                    <img src="./image/podika.jpg" alt="">
+                    <p>PODIKA</p>
+                </div>
+                <div class="imgbox">
+                    <img src="./image/podika-android.jpg" alt="">
+                    <p>PODIKA App</p>
+                </div>
+                <div class="imgbox">
+                    <img src="./image/zero-plastic.jpg" alt="">
+                    <p>Zero Plastic App</p>
+                </div>
+                <div class="imgbox">
+                    <img src="./image/hogi-online.jpg" alt="">
+                    <p>HOGI Online</p>
+                </div>
+                <div class="imgbox">
+                    <img src="./image/rc-retraining.jpg" alt="">
+                    <p>RC rc-retraining</p>
+                </div>
+                <div class="imgbox">
+                    <img src="./image/bimbo.jpg" alt="">
+                    <p>BIMBO Supermarket</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div id="contact">
+        <div class="contact">
+            <div class="title">
+                <h1>Contactez-nous</h1>
+            </div>
+            <div class="contact-part">
+                <div class="part1">
+                    <div class="part1box">
+                        <h1>Phone</h1>
+                        <a href="tel:+25776161970"><p>+257 75 20 22 31</p></a>
+                    </div>
+                    <div class="part1box">
+                        <h1>E-mail</h1>
+                       <a href="mailto:contact@hogi.bi"><p>contact@hogi.bi</p></a>
+                    </div>
+                </div>
+                <div class="part2">
+                    <div class="form">
+                        <label  for="">Addresse e-mail:</label><br>
+                        <input type="email" placeholder=""><br>
+                        <p>We'll never share your email with anyone else.</p><br>
+                        <label for="">Nom: </label><br>
+                        <input type="text"><br><br>
+                        <label for="">Message</label><br>
+                        <textarea name="" id="" cols="30" rows="10"></textarea><br><br>
+                        <a href="#"><button>Envoyer</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="icons">
+           <a href="#"><i class="fab fa-facebook-f"></i></a>
+           <a href="#"><i class="fab fa-twitter"></i></a>
+           <a href="#"><i class="fab fa-youtube"></i></a>
+           <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="copyright">
+            <p>© Copyright 2021 | HOGI. All Rights Reserved. </p>
+        </div>
+    </div>
+    </div> 
+    </div>
+    </div>
+</body>
 </html>
