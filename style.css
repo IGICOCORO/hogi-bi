@@ -418,7 +418,7 @@ width:540px;
 background-color:#ffffff;
 border-radius:6px;
 }
-.container-values .cardbox p{
+.container-values .cardbox .texto{
 margin-right:10px;
 padding:30px;
 font-size:14px;
@@ -428,28 +428,7 @@ color:#ffffff;
 font-size:90px;
 z-index:1;
 background-color:#FFE161;
-padding:100px 50px 100px 50px ;
-}
-.container-values .cardbox .icon2 i{
-color:#ffffff;
-font-size:90px;
-z-index:1;
-background-color:#8caff0;
-padding:100px 50px 100px 50px ;
-}
-.container-values .cardbox .icon3 i{
-color:#ffffff;
-font-size:73px;
-z-index:1;
-background-color:#ff6666;
-padding:100px 50px 100px 50px ;
-}
-.container-values .cardbox .icon4 i{
-color:#ffffff;
-font-size:90px;
-z-index:1;
-background-color:#6dd47e;
-padding:100px 50px 100px 50px ;
+padding:80px 50px 80px 50px ;
 }
 .cardbox{
 display:flex;
