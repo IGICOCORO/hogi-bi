@@ -112,12 +112,13 @@ nav .icon-burger .line{
     transition: all .3s ease-in-out;
 }
 .img{
-background-image:url(./image/img4.webp);
-background-repeat:no-repeat;
+background-image:url(./image/background.jpg);
+background-repeat: no-repeat;
 background-position:center;
-width:100%;
-height:600px;
-background-attachment:fixed;
+background-size: cover;
+width: 100%;
+height: 600px;
+background-attachment: fixed;
 }
 .text{
 margin-left:auto;
@@ -130,6 +131,7 @@ color:#FFE161;
 font-size:80px;
 font-family:arial;
 font-weight:900;
+font-family: 'Jost', sans-serif;
 }
 
 .paragraph{
@@ -142,6 +144,9 @@ margin-top:20px;
 }
 .wrapper{
 display:inline-flex;
+}
+.wrapper h1{
+    color: white;
 }
 .paragraph p{
 font-size:40px;
@@ -210,6 +215,12 @@ display:flex;
 justify-content:center;
 margin-top:50px;
 }
+.touch{
+    display: flex;
+}
+.touch p{
+    padding-right: 8px;
+}
 .button-contact button{
 padding:13px 40px 13px 40px;
 background-color:#6dd47e;
@@ -217,6 +228,7 @@ border:none;
 border-radius:3px;
 color:#fff;
 font-weight:bolder;
+box-shadow: 0px 2px 5px 0px black;
 cursor:pointer;
 }
 .button-contact i{
@@ -484,13 +496,13 @@ font-size:40px;
 }
 .contact-part{
 display:flex;
-align-items: center;
-justify-content:space-around;
+
+justify-content:center;
 padding:0px 0px 80px 0px;
 }
 .part1box{
 background-color:#ffffff;
-padding:55px 120px 55px 120px;
+padding:55px 130px 55px 130px;
 border-radius:10px;
 margin:0px 0px 50px 0px;
 }
@@ -541,6 +553,7 @@ font-size:20px;
 .footer .copyright{
 color:#8caff0;
 font-size:18px;
+display: flex;
 }
 @media screen and (max-width: 768px) {
     nav .logo{

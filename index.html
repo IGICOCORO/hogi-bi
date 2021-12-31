@@ -84,7 +84,7 @@
             <div class="navbar">
                 <input id="nav-toggle"  type="checkbox" name="">
                 <div class="logo">
-                    <a href="hogi.html"><img  src="./image/logo1.png" alt=""></a>
+                    <a href="index.html"><img  src="./image/logo1.png" alt=""></a>
                 </div>
                 <ul class="links">
                     <template  x-for="(item,i) in menus">
@@ -155,8 +155,10 @@
                         </div>
                     </div>
                     <div class="button-contact">
-                        <a href="">
-                            <button class="touch"><p x-text="dict[lang]['gtouch']"></p><i class="far fa-envelope"></i>
+                        <a href="#contact">
+                            <button class="touch">
+                                    <p x-text="dict[lang]['gtouch']"></p>
+                                    <i class="far fa-envelope"></i>
                             </button>
                         </a>
                     </div>
@@ -570,7 +572,7 @@
                 </a>
             </div>
             <div class="copyright">
-                ©<p x-text="dict[lang]['cp']"></p>  <p> 2021 | HOGI.</p>
+                <p>©</p><p x-text="dict[lang]['cp']"></p>  <p> 2021 | HOGI.</p>
                 <p x-text="dict[lang]['droit']"></p>
             </div>
         </div>
