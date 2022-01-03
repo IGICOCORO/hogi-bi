@@ -79,7 +79,7 @@
 <body>
     <div x-data="app">
         <div class="container">
-            <nav>
+            <nav id="nav2">
         <div class="header">
             <div class="navbar">
                 <input id="nav-toggle"  type="checkbox" name="">
@@ -87,20 +87,20 @@
                     <a href="index.html"><img  src="./image/logo1.png" alt=""></a>
                 </div>
                 <ul class="links">
-                    <template  x-for="(item,i) in menus">
-                        <ul class="menuItem" >
-                            <li class="listItem">
+                    <template  x-for="(item,i) in menus">            
+                        <li class="listItem">
                             <a class="links" :href="`#${menus[i]}`">
                                 <i :class="icons[i]"></i>
                                 <p x-text="dict[lang][item]"></p>
                             </a>
                         </li>
-                        </ul>
                     </template>
+                </ul>
                     <div class="lang-menu">
                                 <div class="selected-lang">
                                     <img class="selectlang" :src="getFlags(lang)" width="25" height="15">
                                     <p  x-text="dict[lang]['lang']"></p>
+                                    <i class="fas fa-angle-down"></i>
                                 </div>
                                 <ul class="flags">
                                     <li class="flagname" @click="lang='en'">
@@ -171,19 +171,22 @@
                     <h1 x-text="dict[lang]['techvalue']"></h1>
                 </div>
                 <div class="cards">
-                    <template  x-for="item,i in valTechtitle">
+                  
                         <div class="container-values">
+                            <template  x-for="item,i in valTechtitle">
                             <div class="cardbox">
+                                <div class="icon" >
+                                    <i :class="Fafa[i]" :style="{'font-size':90 +'px'}"></i>
+                                </div>
                                 <div class="texto">
                                     <h3 :style="{ 'color':backIcon[i]}" x-text="dict[lang][valTechtitle[i]]"></h3><br>
                                     <span x-text="dict[lang][valTechdescr[i]]"></span>
                                 </div>
-                                <div class="icon" >
-                                    <i :class="Fafa[i]" :style="{'font-size':90 +'px'}"></i>
-                                </div>
+                                
                             </div>
+                        </template>
                         </div>
-                    </template>
+                   
                 </div>
             </div>
         </div>
@@ -577,7 +580,20 @@
             </div>
         </div>
     </div>
-   
+<script>
+addEventListener("load", function(){
+    var menus = document.querySelectorAll(".listItem")
+    var nav = document.getElementById("nav-toggle")
+    var menu;
+    for(var i=0; i<menus.length; i++){
+        menu = menus[i];
+        menu.addEventListener("click", function(){
+            nav.checked = false;
+            console.log(nav)
+        })
+    }
+})
+</script>  
 </body>
 
 </html>
