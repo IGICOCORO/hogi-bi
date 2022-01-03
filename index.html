@@ -176,7 +176,7 @@
                             <template  x-for="item,i in valTechtitle">
                             <div class="cardbox">
                                 <div class="icon" >
-                                    <i :class="Fafa[i]" :style="{'font-size':90 +'px'}"></i>
+                                    <i :class="Fafa[i]" :style="{'font-size':90 +'px','background-color':backIcon[i]}"></i>
                                 </div>
                                 <div class="texto">
                                     <h3 :style="{ 'color':backIcon[i]}" x-text="dict[lang][valTechtitle[i]]"></h3><br>
