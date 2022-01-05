@@ -33,7 +33,7 @@ document.addEventListener('alpine:init',() => {
 				'codeuniversaldescr':"We use the same programming languages, the same framework, libraries and tools but we solve for different customers with different target.we customize as needed.",
 				'dowhatulov':"Do what you love, love what you do",
 				'dowhatulovdescr':"Every member in the team has passed more than 5 years studying and working on different projects just for fun. For us, programming is far of the way to earn money, programming is the part of our life, It's our happiness.",
-				'handwithudev':"Who we are without   community? We work hand in hand with UDEV TEAM.Do what you love, love what you do",
+				'handwithudev':"Who we are without   community? We work hand in hand with UDEV TEAM.",
 				'moreinfos':"More infos about UDEV Team",
 				'titlequipe':"Our team",
 				'titlecontact':"Contact Us",	

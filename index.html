@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobirise/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
      <script src="./app.js" defer></script>
     <script  src="cdn.min.js" defer></script>
@@ -133,435 +134,454 @@
         </div>
     </nav>
         </div>
-        <div class="title_part">
-            <div class="home">
-                <div class="img">
-                    <img src="" alt="">
-                    <div class="text">
-                        <h1>HOGI</h1>
-                    </div>
-                    <div class="paragraph">
-                        <div class="wrapper">
-                            
-                            <h1>We transform 
-                                <span
-                                class="txt-rotate"
-                                data-period="2000"
-                                data-rotate='["problems into solutions.", 
-                                "issues into opportunities.", 
-                                "ideas into reality."]'></span>
+    <div class="section">
+            <div class="title_part">
+                <div class="home">
+                    <div class="img">
+                        <img src="" alt="">
+                        <div class="text">
+                            <h1>HOGI</h1>
+                        </div>
+                        <div class="paragraph">
+                            <div class="wrapper">
                                 
-                            </h1>
-                        </div>
-                    </div>
-                    <div class="button-contact">
-                        <a href="#contact">
-                            <button class="touch">
-                                    <p x-text="dict[lang]['gtouch']"></p>
-                                    <i class="far fa-envelope"></i>
-                            </button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div :id="menus[0]">
-            <div class="valeurs">
-                <div class="title">
-                    <h1 x-text="dict[lang]['techvalue']"></h1>
-                </div>
-                <div class="cards">
-                  
-                        <div class="container-values">
-                            <template  x-for="item,i in valTechtitle">
-                            <div class="cardbox">
-                                <div class="icon" >
-                                    <i :class="Fafa[i]" :style="{'font-size':90 +'px','background-color':backIcon[i]}"></i>
-                                </div>
-                                <div class="texto">
-                                    <h3 :style="{ 'color':backIcon[i]}" x-text="dict[lang][valTechtitle[i]]"></h3><br>
-                                    <span x-text="dict[lang][valTechdescr[i]]"></span>
-                                </div>
-                                
-                            </div>
-                        </template>
-                        </div>
-                   
-                </div>
-            </div>
-        </div>
-        <div class="codes">
-            <div class="title-code">
-                <p x-text="dict[lang]['codeonlytitle']"></p>
-            </div>
-            <template x-for="item,i in codeonlytitleT.length" >
-                <div class="card1-code" >
-                    <div class="pic">
-                        <img :src="Images[i]" alt="">
-                    </div>
-                    <div class="text">
-                        <p>
-                            <span id="code1" x-text="dict[lang][codeonlytitleT[item-1]]"></span>
-                            <br>
-                            <br>
-                            <span x-text="dict[lang][codeonlydescrT[item-1]]"></span>.</p>
-                    </div>
-                </div>
-            </template>
-        </div>
-        <div class="udev">
-            <div class="title">
-                <p x-text="dict[lang]['handwithudev']"></p>
-            </div>
-            <div class="button">
-                <a href="https://www.facebook.com/umufundi/">
-                    <button x-text="dict[lang]['moreinfos']"><i class="fas fa-mouse-pointer"></i>
-                    </button>
-                </a>
-            </div>
-        </div>
-        <div :id="menus[1]">
-            <div class="team">
-                <div class="title">
-                    <p x-text="dict[lang]['titlequipe']"></p>
-                </div>
-                <div class="container-img">
-                    <div class="box">
-                        <div class="imgbox">
-                            <img src="./image/incognito.jpg" alt="">
-                        </div>
-                        <h1>Incogito</h1>
-                        <p x-text="dict[lang]['PM']"></p>
-                        <div class="icons">
-                            <div class="facebook">
-                                <a href="">
-                                    <i class="fab fa-facebook-f">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="twitter">
-                                <a href="https://twitter.com/prime_Ikiza" target="blank">
-                                    <i class="fab fa-twitter">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="whatsapp">
-                                <a href="https://api.whatsapp.com/send?phone=25768900800" target="blank">
-                                    <i class="fab fa-whatsapp">
-                                    </i>
-                                </a>
+                                <h1>We transform 
+                                    <span
+                                    class="txt-rotate"
+                                    data-period="2000"
+                                    data-rotate='["problems into solutions.", 
+                                    "issues into opportunities.", 
+                                    "ideas into reality."]'></span>
+                                    
+                                </h1>
                             </div>
                         </div>
-                    </div>
-                    <div class="box">
-                        <div class="imgbox">
-                            <img src="./image/yuda.jpg" alt="">
-                        </div>
-                        <h1>Yuda</h1>
-                        <p x-text="dict[lang]['GMD']" ></p>
-                        <div class="icons">
-                            <div class="facebook">
-                                <a href="https://www.facebook.com/juda.inno" target="blank">
-                                    <i class="fab fa-facebook-f">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="twitter">
-                                <a href="https://behance.com/sangweno2cd4" target="blank">
-                                    <i class="fab fa-behance">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="twitter">
-                                <a href="https://twitter.com/St_yuda1" target="blank">
-                                    <i class="fab fa-twitter">
-                                    </i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="imgbox">
-                            <img src="./image/konstructor.jpg" alt="">
-                        </div>
-                        <h1>Nkurunziza</h1>
-                        <p x-text="dict[lang]['ArchDev']"></p>
-                        <div class="icons">
-                            <div class="whatsapp">
-                                <a href="https://twitter.com/St_yuda1" target="blank">
-                                    <i class="fab fa-whatsapp">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="twitter">
-                                <a href="https://twitter.com/inganzamarumpu" target="blank">
-                                    <i class="fab fa-twitter">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="twitter">
-                                <a href="https://github.com/inganzamarumpu" target="blank">
-                                    <i class="fab fa-github">
-                                    </i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="imgbox">
-                            <img src="./image/artcalo.jpg" alt="">
-                        </div>
-                        <h1>Artcal'o</h1>
-                        <p x-text="dict[lang]['dev']"></p>
-                        <div class="icons">
-                            <div class="facebook">
-                                <a href="https://www.facebook.com/carmel.niyungeko" target="blank">
-                                    <i class="fab fa-facebook-f">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="twitter">
-                                <a href="https://github.com/ArtcalO97/" target="blank">
-                                    <i class="fab fa-github">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="whatsapp">
-                                <a href="https://api.whatsapp.com/send?phone=25761640457" target="blank">
-                                    <i class="fab fa-whatsapp">
-                                    </i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="imgbox">
-                            <img src="./image/shwaib.jpg" alt="">
-                        </div>
-                        <h1>Shwaïb LeBon</h1>
-                        <p x-text="dict[lang]['dev']"></p>
-                        <div class="icons">
-                            <div class="facebook">
-                                <a href="https://www.facebook.com/ndabashinze.shwaib" target="blank">
-                                    <i class="fab fa-facebook-f">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="twitter">
-                                <a href="https://github.com/shwaiblebon/" target="blank">
-                                    <i class="fab fa-github">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="whatsapp">
-                                <a href="https://api.whatsapp.com/send?phone=25772029330" target="blank">
-                                    <i class="fab fa-whatsapp">
-                                    </i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="imgbox">
-                            <img src="./image/tony.jpg" alt="">
-                        </div>
-                        <h1>TonyBim</h1>
-                        <p x-text="dict[lang]['GMD']"></p>
-                        <div class="icons">
-                            <div class="facebook">
-                                <a href="https://www.facebook.com/profile.php?id=100009844923833" target="blank"> <i class="fab fa-facebook-f">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="twitter">
-                                <a href="https://twitter.com/bimenyimana_b" target="blank">
-                                    <i class="fab fa-twitter">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="whatsapp">
-                                <a href="https://api.whatsapp.com/send?phone=25776161970" target="blank">
-                                    <i class="fab fa-whatsapp">
-                                    </i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="imgbox">
-                            <a href="">
-                                <img src="./image/jovin.jpg" alt="">
+                        <div class="button-contact">
+                            <a href="#contact">
+                                <button class="touch">
+                                        <p x-text="dict[lang]['gtouch']"></p>
+                                        <i class="far fa-envelope"></i>
+                                </button>
                             </a>
                         </div>
-                        <h1>Mtl. Nsanzumukiza</h1>
-                        <p x-text="dict[lang]['APM']"></p>
-                        <div class="icons">
-                            <div class="facebook">
-                                <a href="https://www.facebook.com/thierry.nsanzumukiza.3" target="blank">
-                                    <i class="fab fa-facebook-f">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="whatsapp">
-                                <a href="https://www.linkedin.com/in/thierry-jovin-9b8bb1109/" target="blank">
-                                    <i class="fab fa-linkedin-in">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="twitter">
-                                <a href="mailto:nsanzumukizath@gmail.com" target="blank">
-                                    <i class="far fa-envelope">
-                                    </i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="imgbox">
-                            <img src="./image/dezos.jpg" alt="">
-                        </div>
-                        <h1>Dezos</h1>
-                        <p x-text="dict[lang]['dev']"></p>
-                        <div class="icons">
-                            <div class="facebook">
-                                <a href="">
-                                    <i class="fab fa-facebook-f">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="twitter">
-                                <a href="https://github.com/Desire1990/" target="blank"> <i class="fab fa-github">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="whatsapp">
-                                <a href="https://api.whatsapp.com/send?phone=25779462806" target="blank">
-                                    <i class="fab fa-whatsapp">
-                                    </i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="imgbox">
-                            <img src="./image/guy.jpg" alt="">
-                        </div>
-                        <h1>Guy-Michel</h1>
-                        <p x-text="dict[lang]['dev']"></p>
-                        <div class="icons">
-                            <div class="twitter">
-                                <a href="https://twitter.com/GBstallman">
-                                    <i class="fab fa-twitter">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="twitter">
-                                <a href="https://github.com/GBstallman" target="blank">
-                                    <i class="fab fa-github">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="whatsapp">
-                                <a href="https://api.whatsapp.com/send?phone=25768381368" target="blank"> <i class="fab fa-whatsapp">
-                                    </i>
-                                </a>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div :id="menus[2]">
-            <div class="portfolio">
-                <div class="title">
-                    <h1 x-text="dict[lang]['portfolio']"></h1>
-                </div>
-                <div class="cardpic">
-                    <div class="imgbox">
-                        <img src="./image/csdteam.jpg" alt="">
-                        <p>CSD Team</p>
+            <div :id="menus[0]">
+                <div class="valeurs">
+                    <div class="title">
+                        <h1 x-text="dict[lang]['techvalue']"></h1>
                     </div>
-                    <div class="imgbox">
-                        <img src="./image/podika.jpg" alt="">
-                        <p>PODIKA</p>
-                    </div>
-                    <div class="imgbox">
-                        <img src="./image/podika-android.jpg" alt="">
-                        <p>PODIKA App</p>
-                    </div>
-                    <div class="imgbox">
-                        <img src="./image/zero-plastic.jpg" alt="">
-                        <p>Zero Plastic App</p>
-                    </div>
+                    <div class="cards">
                     
-                    <div class="imgbox">
-                        <img src="./image/rc-retraining.jpg" alt="">
-                        <p>RC rc-retraining</p>
-                    </div>
-                    <div class="imgbox">
-                        <img src="./image/hogi-online.jpg" alt="">
-                        <p>HOGI Online</p>
-                    </div>
-                    <div class="imgbox">
-                        <img src="./image/bimbo.jpg" alt="">
-                        <p>BIMBO Supermarket</p>
+                            <div class="container-values">
+                                <template  x-for="item,i in valTechtitle">
+                                <div class="cardbox">
+                                    <div class="icon" >
+                                        <i :class="Fafa[i]" :style="{'font-size':90 +'px','background-color':backIcon[i]}"></i>
+                                    </div>
+                                    <div class="texto">
+                                        <h3 :style="{ 'color':backIcon[i]}" x-text="dict[lang][valTechtitle[i]]"></h3><br>
+                                        <span x-text="dict[lang][valTechdescr[i]]"></span>
+                                    </div>
+                                    
+                                </div>
+                            </template>
+                            </div>
+                    
                     </div>
                 </div>
             </div>
-        </div>
-        <div :id="menus[3]">
-            <div class="contact">
-                <div class="title">
-                    <h1 x-text="dict[lang]['titlecontact']"></h1>
+            <div class="codes">
+                <div class="title-code">
+                    <p x-text="dict[lang]['codeonlytitle']"></p>
                 </div>
-                <div class="contact-part">
-                    <div class="part1">
-                        
-                        <div class="part1box">
-                            <div class="phonetexts">                            <h1 x-text="dict[lang]['phone']"></h1>
-                                <a href="tel:+25776161970">
-                                    <p>+257 75 20 22 31</p>
-                                </a>
-                             </div>
-                            <div class="iconphone">
-                                <i class="fas fa-phone"></i>
-                            </div>
+                <template x-for="item,i in codeonlytitleT.length" >
+                    <div class="card1-code" >
+                        <div class="pic">
+                            <img :src="Images[i]" alt="">
                         </div>
-                        <div class="part1box">
-                            <div class="phonetexts">
-                                <h1 x-text="dict[lang]['emailfrom']"></h1>
-                                <a href="mailto:contact@hogi.bi">
-                                    <p>contact@hogi.bi</p>
-                                </a>
-                            </div>
-                            <div class="iconmail">
-                                <i class="fas fa-envelope"></i> 
-                            </div>
+                        <div class="text">
+                            <p>
+                                <span id="code1" x-text="dict[lang][codeonlytitleT[item-1]]"></span>
+                                <br>
+                                <br>
+                                <span x-text="dict[lang][codeonlydescrT[item-1]]"></span>.</p>
                         </div>
-                        
                     </div>
-                    <div class="part2">
-                        <div class="form">
-                            <label x-text="dict[lang]['email']" for=""></label>
-                            <br>
-                            <input type="email" placeholder="">
-                            <br>
-                            <p x-text="dict[lang]['formchamps']"></p>
-                            <br>
-                            <label x-text="dict[lang]['name']" for=""></label>
-                            <br>
-                            <input type="text">
-                            <br>
-                            <br>
-                            <label x-text="dict[lang]['message']" for=""></label>
-                            <br>
-                            <textarea name="" id="" cols="30" rows="10">
-                            </textarea>
-                            <br>
-                            <br>
-                            <a href="#">
-                                <button x-text="dict[lang]['send']"></button>
-                            </a>
+                </template>
+            </div>
+            <div class="udev">
+                <div class="title">
+                    <p x-text="dict[lang]['handwithudev']"></p>
+                </div>
+                <div class="button">
+                    <a href="https://www.facebook.com/umufundi/">
+                        <button x-text="dict[lang]['moreinfos']"><i class="fas fa-mouse-pointer"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div :id="menus[1]">
+                <div class="team">
+                    <div class="title">
+                        <p x-text="dict[lang]['titlequipe']"></p>
+                    </div>
+                    <div class="container-img">
+                        <div class="box">
+                            <div class="imgbox">
+                                <img src="./image/incognito.jpg" alt="">
+                            </div>
+                            <h1>Incogito</h1>
+                            <p x-text="dict[lang]['PM']"></p>
+                            <div class="icons">
+                                <div class="facebook">
+                                    <a href="">
+                                        <i class="fab fa-facebook-f">
+                                        </i>
+                                    </a>
+                                </div>
+                                <div class="twitter">
+                                    <a href="https://twitter.com/prime_Ikiza" target="blank">
+                                        <i class="fab fa-twitter">
+                                        </i>
+                                    </a>
+                                </div>
+                                <div class="whatsapp">
+                                    <a href="https://api.whatsapp.com/send?phone=25768900800" target="blank">
+                                        <i class="fab fa-whatsapp">
+                                        </i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="imgbox">
+                                <img src="./image/yuda.jpg" alt="">
+                            </div>
+                            <h1>Yuda</h1>
+                            <p x-text="dict[lang]['GMD']" ></p>
+                            <div class="icons">
+                                <div class="facebook">
+                                    <a href="https://www.facebook.com/juda.inno" target="blank">
+                                        <i class="fab fa-facebook-f">
+                                        </i>
+                                    </a>
+                                </div>
+                                <div class="twitter">
+                                    <a href="https://behance.com/sangweno2cd4" target="blank">
+                                        <i class="fab fa-behance">
+                                        </i>
+                                    </a>
+                                </div>
+                                <div class="twitter">
+                                    <a href="https://twitter.com/St_yuda1" target="blank">
+                                        <i class="fab fa-twitter">
+                                        </i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="imgbox">
+                                <img src="./image/konstructor.jpg" alt="">
+                            </div>
+                            <h1>Nkurunziza</h1>
+                            <p x-text="dict[lang]['ArchDev']"></p>
+                            <div class="icons">
+                                <div class="whatsapp">
+                                    <a href="https://twitter.com/St_yuda1" target="blank">
+                                        <i class="fab fa-whatsapp">
+                                        </i>
+                                    </a>
+                                </div>
+                                <div class="twitter">
+                                    <a href="https://twitter.com/inganzamarumpu" target="blank">
+                                        <i class="fab fa-twitter">
+                                        </i>
+                                    </a>
+                                </div>
+                                <div class="twitter">
+                                    <a href="https://github.com/inganzamarumpu" target="blank">
+                                        <i class="fab fa-github">
+                                        </i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="imgbox">
+                                <img src="./image/artcalo.jpg" alt="">
+                            </div>
+                            <h1>Artcal'o</h1>
+                            <p x-text="dict[lang]['dev']"></p>
+                            <div class="icons">
+                                <div class="facebook">
+                                    <a href="https://www.facebook.com/carmel.niyungeko" target="blank">
+                                        <i class="fab fa-facebook-f">
+                                        </i>
+                                    </a>
+                                </div>
+                                <div class="twitter">
+                                    <a href="https://github.com/ArtcalO97/" target="blank">
+                                        <i class="fab fa-github">
+                                        </i>
+                                    </a>
+                                </div>
+                                <div class="whatsapp">
+                                    <a href="https://api.whatsapp.com/send?phone=25761640457" target="blank">
+                                        <i class="fab fa-whatsapp">
+                                        </i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="imgbox">
+                                <img src="./image/shwaib.jpg" alt="">
+                            </div>
+                            <h1>Shwaïb LeBon</h1>
+                            <p x-text="dict[lang]['dev']"></p>
+                            <div class="icons">
+                                <div class="facebook">
+                                    <a href="https://www.facebook.com/ndabashinze.shwaib" target="blank">
+                                        <i class="fab fa-facebook-f">
+                                        </i>
+                                    </a>
+                                </div>
+                                <div class="twitter">
+                                    <a href="https://github.com/shwaiblebon/" target="blank">
+                                        <i class="fab fa-github">
+                                        </i>
+                                    </a>
+                                </div>
+                                <div class="whatsapp">
+                                    <a href="https://api.whatsapp.com/send?phone=25772029330" target="blank">
+                                        <i class="fab fa-whatsapp">
+                                        </i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="imgbox">
+                                <img src="./image/tony.jpg" alt="">
+                            </div>
+                            <h1>TonyBim</h1>
+                            <p x-text="dict[lang]['GMD']"></p>
+                            <div class="icons">
+                                <div class="facebook">
+                                    <a href="https://www.facebook.com/profile.php?id=100009844923833" target="blank"> <i class="fab fa-facebook-f">
+                                        </i>
+                                    </a>
+                                </div>
+                                <div class="twitter">
+                                    <a href="https://twitter.com/bimenyimana_b" target="blank">
+                                        <i class="fab fa-twitter">
+                                        </i>
+                                    </a>
+                                </div>
+                                <div class="whatsapp">
+                                    <a href="https://api.whatsapp.com/send?phone=25776161970" target="blank">
+                                        <i class="fab fa-whatsapp">
+                                        </i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="imgbox">
+                                <a href="">
+                                    <img src="./image/jovin.jpg" alt="">
+                                </a>
+                            </div>
+                            <h1>Mtl. Nsanzumukiza</h1>
+                            <p x-text="dict[lang]['APM']"></p>
+                            <div class="icons">
+                                <div class="facebook">
+                                    <a href="https://www.facebook.com/thierry.nsanzumukiza.3" target="blank">
+                                        <i class="fab fa-facebook-f">
+                                        </i>
+                                    </a>
+                                </div>
+                                <div class="whatsapp">
+                                    <a href="https://www.linkedin.com/in/thierry-jovin-9b8bb1109/" target="blank">
+                                        <i class="fab fa-linkedin-in">
+                                        </i>
+                                    </a>
+                                </div>
+                                <div class="twitter">
+                                    <a href="mailto:nsanzumukizath@gmail.com" target="blank">
+                                        <i class="far fa-envelope">
+                                        </i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="imgbox">
+                                <img src="./image/dezos.jpg" alt="">
+                            </div>
+                            <h1>Dezos</h1>
+                            <p x-text="dict[lang]['dev']"></p>
+                            <div class="icons">
+                                <div class="facebook">
+                                    <a href="">
+                                        <i class="fab fa-facebook-f">
+                                        </i>
+                                    </a>
+                                </div>
+                                <div class="twitter">
+                                    <a href="https://github.com/Desire1990/" target="blank"> <i class="fab fa-github">
+                                        </i>
+                                    </a>
+                                </div>
+                                <div class="whatsapp">
+                                    <a href="https://api.whatsapp.com/send?phone=25779462806" target="blank">
+                                        <i class="fab fa-whatsapp">
+                                        </i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="imgbox">
+                                <img src="./image/guy.jpg" alt="">
+                            </div>
+                            <h1>Guy-Michel</h1>
+                            <p x-text="dict[lang]['dev']"></p>
+                            <div class="icons">
+                                <div class="twitter">
+                                    <a href="https://twitter.com/GBstallman">
+                                        <i class="fab fa-twitter">
+                                        </i>
+                                    </a>
+                                </div>
+                                <div class="twitter">
+                                    <a href="https://github.com/GBstallman" target="blank">
+                                        <i class="fab fa-github">
+                                        </i>
+                                    </a>
+                                </div>
+                                <div class="whatsapp">
+                                    <a href="https://api.whatsapp.com/send?phone=25768381368" target="blank"> <i class="fab fa-whatsapp">
+                                        </i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div :id="menus[2]">
+                <div class="portfolio">
+                    <div class="title">
+                        <h1 x-text="dict[lang]['portfolio']"></h1>
+                    </div>
+                    <div class="cardpic">
+                        <div class="imgbox">
+                            <div class="img1">
+                                <img src="./image/csdteam.jpg" alt="">
+                            </div>
+                            <p>CSD Team</p>
+                        </div>
+                        <div class="imgbox">
+                            <div class="img1">
+                                <img src="./image/podika.jpg" alt="">
+                            </div>
+                            <p>PODIKA</p>
+                        </div>
+                        <div class="imgbox">
+                            <div class="img1">
+                                <img src="./image/podika-android.jpg" alt="">
+                            </div>
+                            <p>PODIKA App</p>
+                        </div>
+                        <div class="imgbox">
+                            <div class="img1">
+                                <img src="./image/zero-plastic.jpg" alt="">
+                            </div>
+                            <p>Zero Plastic App</p>
+                        </div>
+                    </div>
+                    <div class="hogionline">
+                        <div class="hogi">
+                            <img src="./image/hogi-online.jpg" alt="">
+                            <p>HOGI Online</p>
+                        </div>
+                    </div>
+                    <div class="cardpic">
+                        <div class="imgbox">
+                            <div class="img1">
+                                <img src="./image/bimbo.jpg" alt="">
+                            </div>
+                            <p>BIMBO Supermarket</p>
+                        </div>
+                        <div class="imgbox">
+                            <div class="img1">
+                                <img src="./image/rc-retraining.jpg" alt="">
+                            </div>
+                            <p>RC Retraining</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div :id="menus[3]">
+                <div class="contact">
+                    <div class="title">
+                        <h1 x-text="dict[lang]['titlecontact']"></h1>
+                    </div>
+                    <div class="contact-part">
+                        <div class="part1">
+                            
+                            <div class="part1box">
+                                <div class="phonetexts">                           
+                                    <h1 x-text="dict[lang]['phone']"></h1>
+                                    <a href="tel:+25776161970">
+                                        <p>+257 75 20 22 31</p>
+                                    </a>
+                                </div>
+                                <div class="iconphone">
+                                    <span class="mbri-hearth"></span>
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                            </div>
+                            <div class="part1box">
+                                <div class="phonetexts">
+                                    <h1 x-text="dict[lang]['emailfrom']"></h1>
+                                    <a href="mailto:contact@hogi.bi">
+                                        <p>contact@hogi.bi</p>
+                                    </a>
+                                </div>
+                                <div class="iconmail">
+                                    <i class="fas fa-envelope"></i> 
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="part2">
+                            <div class="form">
+                                <label x-text="dict[lang]['email']" for=""></label>
+                                <br>
+                                <input type="email" placeholder="">
+                                <br>
+                                <p x-text="dict[lang]['formchamps']"></p>
+                                <br>
+                                <label x-text="dict[lang]['name']" for=""></label>
+                                <br>
+                                <input type="text">
+                                <br>
+                                <br>
+                                <label x-text="dict[lang]['message']" for=""></label>
+                                <br>
+                                <textarea name="" id="" cols="30" rows="10">
+                                </textarea>
+                                <br>
+                                <br>
+                                <a href="#">
+                                    <button x-text="dict[lang]['send']"></button>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
