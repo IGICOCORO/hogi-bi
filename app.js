@@ -13,6 +13,8 @@ document.addEventListener('alpine:init',() => {
 		'dict':{
 			'en':{
 				'lang':"English",
+				'textArray' : ['problems into solutions.', 'issues into opportunities.', 'ideas into reality.'],
+				'transf':"We transform ",
 				'values':"Values",                            
 				'team':"Team",                            
 				'portfolio':"Portfolio",                            
@@ -33,7 +35,7 @@ document.addEventListener('alpine:init',() => {
 				'codeuniversaldescr':"We use the same programming languages, the same framework, libraries and tools but we solve for different customers with different target.we customize as needed.",
 				'dowhatulov':"Do what you love, love what you do",
 				'dowhatulovdescr':"Every member in the team has passed more than 5 years studying and working on different projects just for fun. For us, programming is far of the way to earn money, programming is the part of our life, It's our happiness.",
-				'handwithudev':"Who we are without   community? We work hand in hand with UDEV TEAM.",
+				'handwithudev':"Who we are without   community? We work hand in hand with UDEV TEAM.Do what you love, love what you do",
 				'moreinfos':"More infos about UDEV Team",
 				'titlequipe':"Our team",
 				'titlecontact':"Contact Us",	
@@ -55,6 +57,8 @@ document.addEventListener('alpine:init',() => {
 				},
 				'fr':{
 				'lang':"Français",
+				'textArray' : ['des problèmes en solutions.', ' des questions en opportunités.', ' des idées en realité.'],
+				'transf':"On Transforme ",
 				'values':"Valeurs",                            
 				'team':"Equipe",                            
 				'portfolio':"Portfolio",                            
@@ -97,8 +101,10 @@ document.addEventListener('alpine:init',() => {
 			},
 			'rn':{
 				'lang':"Kirundi",
+				'textArray' : ['Ibibazo mu nyishu.', 'ingorane mu mahirwe.', 'ivyiyumviro mu bigaragara.'],
+				'transf':"Turahindura ",
 				'values':"Ibitugize",                            
-				'team':"Umuryango wacu",                            
+				'team':"Twebwe",                            
 				'portfolio':"Ibikorwa ",                            
 				'contact':"Turondere",
 				'techvalue':"Imyitwarariko yacu",
@@ -119,7 +125,7 @@ document.addEventListener('alpine:init',() => {
 				'dowhatulovdescr':"Kira munyamuryango wa HOGI yamaze imyaka ireka 5 yiga kandi yongera akora kumigambi itandukanye kubwo kwishimisha. Kuri twebwe, kwandika code birengeye cane inzira yo guca amafaranga, gu programma bigize ubuzima bwacu bwa misi yose, n'umunezero wacu.",
 				'handwithudev':"Turi bande ata muryango? Dukorana ubudahengeshanya na UDEV Team.",
 				'moreinfos':"Menya vyinshi kuri UDEV Team.",
-				'titlequipe':"Umuryango wacu",
+				'titlequipe':"Twebwe",
 				'titlecontact':"Turondere",
 				'dev':"Umuhinyitsi",
 				'APM':"Icariho c'umukuru w'ibikorwa",
@@ -147,6 +153,7 @@ document.addEventListener('alpine:init',() => {
 				return './image/FRENCH.jpg'
 			} 
 				return './image/KIRUNDI.jpg'
-		}
+		},
+
 	}
 })
