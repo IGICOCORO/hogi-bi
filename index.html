@@ -87,7 +87,6 @@
                         </div>
                       <div class="paragraph">
                         <div class="wrapper">
-                            <h1 x-text="dict[lang]['transf']"> </h1><span>&nbsp;</span>
                     <div class="max-w-7xl mx-auto text-center" x-data="{
                                     text: '',
                                     textIndex: 0,
@@ -100,7 +99,6 @@
                                  }" x-init="(() => { 
                                  
                                     let typingInterval = setInterval(startTyping, $data.typeSpeed);
-                                 
                                  function startTyping(){
                                     let current = $data.dict[lang]['textArray'][ $data.textIndex ];
                                     if($data.charIndex > current.length){
@@ -111,7 +109,7 @@
                                          }, $data.pauseEnd);
                                     }   
                                        
-                                    $data.text = current.substring(0, $data.charIndex);
+                                    $data.text = dict[lang]['transf']+' '+current.substring(0, $data.charIndex)+'|';
                                     if($data.direction == 'forward'){
                                         $data.charIndex += 1;
                                      } else {
@@ -141,9 +139,9 @@
                                     }
                                  }, $data.cursorSpeed);
                              })()">
-                        <div class="relative h-auto">
-                            <h1 class="text-7xl font-black" x-text="text"></h1>
-                            <span class="absolute right-0 top-0 h-full w-5 -mr-8 bg-black" x-ref="cursor">
+                        <div class="relative">
+                            <h1  x-text="text"></h1>
+                            <span class="cursor" x-ref="cursor">
                         </div>
                         </div>
                         </div>
@@ -599,7 +597,7 @@
                 </a>
             </div>
             <div class="copyright">
-                <p>©</p><p x-text="dict[lang]['cp']"></p>  <p> 2021 | HOGI.</p>
+                <p>©</p><p x-text="dict[lang]['cp']"></p><span></span>  <p> 2021 | HOGI.</p>
                 <p x-text="dict[lang]['droit']"></p>
             </div>
         </div>
