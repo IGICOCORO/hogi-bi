@@ -103,8 +103,7 @@ transition:.3s;
 }
 nav .icon-burger{
     display: none;
-    position: absolute;
-    right: 5%;
+    position: relative
     top: 50%;
     transform: translateY(-50%);
 }
@@ -217,7 +216,7 @@ font-weight:bolder;
 }
 .card1-code .text p{
 text-align:justify;
-margin:-100px 80px 20px 80px;
+margin:-100px 50px 20px 50px;
 color:#232323;
 font-size: 19px;
 }
@@ -284,8 +283,7 @@ width:82vw;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 grid-gap:50px;
-padding:50px;
-z-index:0;
+padding:50px 0px 50px 0px;
 }
 
 .contact .title h1{
@@ -295,12 +293,10 @@ z-index:0;
 .container-img .box{
 position:relative;
 height:500px;
-box-shadow:0 30px 30px rgba(0,0,0,0,4);
 overflow:hidden;
-width:260px;
+width:250px;
 background-color:#ffffff;
-box-shadow:0px 0px 8px -3px;
-border-radius:3px;
+border-radius:1px;
 }
 .container-img .box::before{
 position:absolute;
@@ -325,7 +321,7 @@ width:100%;
 object-fit:cover;
 }
 .container-img .box h1{
-margin-top:20px;
+margin-top:40px;
 position:relative;
 text-align:center;
 font-size:20px;
@@ -454,6 +450,7 @@ padding:0px 0px 20px 0px;
     width: 100%;
     background-size: cover;
     border-radius:5px 5px 0px 0px;
+    object-fit: cover;
 }
 .hogionline .hogi{
     border-radius:5px;
@@ -487,6 +484,7 @@ height: 326px;
 height:100%;
 width:100%;
 position:cover;
+object-fit: cover;
 }
 
 .cardpic .imgbox p{
@@ -505,7 +503,6 @@ font-size:40px;
 display: grid;
 grid-template-columns: repeat(2,1fr);
 grid-gap:20px;
-width: 85%;
 padding:0px 0px 80px 0px;
 }
 .part1box{
@@ -600,20 +597,67 @@ margin-right: 20px;
 
 }
 @media screen and (max-width: 640px) {
+
+.logo img{
+    margin-top: 28px;
+}
 .container-img .box{
-    width: 350px;
+    width: 100%;
     height: 600px;
-    margin-right: 90px;
+    /* margin-right: 90px; */
 }
+.container-values .cardbox .icon{
+    width: 100%;
 }
-@media screen and (max-width: 768px) {
+.title-code p{
+    font-size: 36px;
+    margin-top: 90px;
+}
+.container-values .cardbox .icon i{
+    width: 100%;
+    padding:100px 0px 100px 0px;
+}
+
+.container-values .cardbox{
+display:flex;
+justify-content:center;
+flex-direction:column;
+}
+.container-values .cardbox .icon i{
+font-size:25px;
+}
+.container-values .cardbox .icon2 i{
+font-size:25px;
+padding:15px 133px 15px 133px;
+}
+.container-values .cardbox .icon3 i{
+font-size:25px;
+padding:15px 133px 15px 133px;
+}
+.container-values .cardbox .icon4 i{
+font-size:25px;
+padding:15px 133px 15px 133px;
+}
+.container-values{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    }
+.container-values .cardbox{
+        height: 470px;
+        width: 100%;
+        }
+}
+@media screen and (max-width: 811px) {
     body{
         overflow-x: hidden;
     }
     nav .logo{
-        float: none;
-        width: auto;
-        justify-content: center;
+        margin-left: 5px;
+    }
+    nav .logo img{
+        height: 40px;
     }
     nav .links{
         position: fixed;
@@ -652,6 +696,10 @@ margin-right: 20px;
     }
     nav .icon-burger{
         display: block;
+        margin-top: 56px;
+    }
+    nav.black .icon-burger{
+        margin-top: 30px;
     }
     nav :checked ~ .icon-burger .line:nth-child(1){
         transform: translateY(10px) rotate(225deg);
@@ -661,14 +709,6 @@ margin-right: 20px;
     }
     nav :checked ~ .icon-burger .line:nth-child(2){
         opacity: 0;
-    }
-  .container-img{
-    width:82vw;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    grid-gap:120px;
-    padding:50px;
-    z-index:0;
     }
 .container-img .box h1{
     margin-top:70px;
@@ -687,9 +727,10 @@ margin-right: 20px;
 display:flex;
 justify-content:space-around;
 flex-direction:column-reverse;
-padding: 20px;
 }
-
+.cardpic .imgbox{
+    width:100%;
+    }
 .paragraph .wrapper p{
 font-size:18px;
 margin-top: 10px;
@@ -702,10 +743,14 @@ font-size:29px;
 padding: 10px;
 }
 .part1box{
-padding:20px 160px 30px 40px ;
+padding:20px 92px 30px 40px ;
 }
 .codes{
     padding:0px;
+}
+.codes .title-code p{
+    margin-top: 0px;
+    padding-top: 30px;
 }
 .card1-code .pic img{
     width:auto;
@@ -725,18 +770,9 @@ height:70px;
     font-size: 28px;
     margin-bottom: 45px;
 }
-.container-values{
-margin: 0 auto;
-display: flex;
-justify-content: center;
-flex-direction: column;
-}
+
 body{
 overflow-x:hidden;
-}
-.container-values .cardbox{
-height: 470px;
-width: 100%;
 }
 .cardbox .texto h3{
     font-weight: 700;
@@ -745,40 +781,7 @@ width: 100%;
 .cardbox .icon i{
     text-align: justify;
 }
-.container-values .cardbox .icon{
-    width: 100%;
-}
-.title-code p{
-    font-size: 36px;
-    margin-top: 90px;
-}
-.container-values .cardbox .icon i{
-    width: 100%;
-    padding:100px 0px 100px 0px;
-}
-.cardpic .imgbox{
-width:100%;
-}
-.container-values .cardbox{
-display:flex;
-justify-content:center;
-flex-direction:column;
-}
-.container-values .cardbox .icon i{
-font-size:25px;
-}
-.container-values .cardbox .icon2 i{
-font-size:25px;
-padding:15px 133px 15px 133px;
-}
-.container-values .cardbox .icon3 i{
-font-size:25px;
-padding:15px 133px 15px 133px;
-}
-.container-values .cardbox .icon4 i{
-font-size:25px;
-padding:15px 133px 15px 133px;
-}
+
 .cardpic{
 display:flex;
 justify-content:space-around;
@@ -799,7 +802,6 @@ background-size: cover;
 }
 .card1-code .text p{
 font-size:18px;
-padding-bottom: 40px;
 }
 .card1-code{
     display: block;
@@ -884,7 +886,6 @@ margin-top:0px;
     display: flex;
     justify-content: center;
     cursor: pointer;
-    margin-right:30px;
 }
 .flags .flagname {
     display: flex;
@@ -896,7 +897,7 @@ margin-top:0px;
     margin-top:0px
 }
 .part2 .form input {
-    width: 400px;
+    width: 350px;
 }
 
 .flagname {
