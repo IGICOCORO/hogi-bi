@@ -4,11 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./image/icon.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mobirise/style.css">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="mobirise/style.css">.
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
      <script src="./app.js" defer></script>
+
     <script  src="cdn.min.js" defer></script>
 
     <script type="text/javascript">
@@ -171,7 +174,7 @@
                                         <i :class="Fafa[i]" :style="{'font-size':90 +'px','background-color':backIcon[i]}"></i>
                                     </div>
                                     <div class="texto">
-                                        <h3 :style="{ 'color':backIcon[i]}" x-text="dict[lang][valTechtitle[i]]"></h3><br>
+                                        <h3 :style="{ 'color':valText[i]}" x-text="dict[lang][valTechtitle[i]]"></h3><br>
                                         <span x-text="dict[lang][valTechdescr[i]]"></span>
                                     </div>
                                     
@@ -196,7 +199,7 @@
                                 <span id="code1" x-text="dict[lang][codeonlytitleT[item-1]]"></span>
                                 <br>
                                 <br>
-                                <span x-text="dict[lang][codeonlydescrT[item-1]]"></span>.</p>
+                                <span  x-text="dict[lang][codeonlydescrT[item-1]]"></span>.</p>
                         </div>
                     </div>
                 </template>
@@ -330,7 +333,7 @@
                             <div class="imgbox">
                                 <img src="./image/shwaib.jpg" alt="">
                             </div>
-                            <h1>Shwaïb LeBon</h1>
+                            <h1>Shwaib LeBon</h1>
                             <p x-text="dict[lang]['dev']"></p>
                             <div class="icons">
                                 <div class="facebook">
@@ -412,7 +415,7 @@
                             <div class="imgbox">
                                 <img src="./image/dezos.jpg" alt="">
                             </div>
-                            <h1>Dezos</h1>
+                            <h1>Desos</h1>
                             <p x-text="dict[lang]['dev']"></p>
                             <div class="icons">
                                 <div class="facebook">
@@ -518,62 +521,65 @@
             </div>
             <div :id="menus[3]">
                 <div class="contact">
-                    <div class="title">
-                        <h1 x-text="dict[lang]['titlecontact']"></h1>
+                    <section class="contacts3 map1 cid-sbjqjUNF7O" id="contacts3-10" style="margin-bottom: 161.8px;">
+    <div class="container">
+        <div class="mbr-section-head">
+            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2" x-text="dict[lang]['titlecontact']">
+                <strong></strong></h3>
+        </div>
+        <div class="row justify-content-center mt-4">
+            <div class="card col-12 col-md-6">
+                <div class="card-wrapper">
+                    <div class="image-wrapper">
+                        <span class="fas fa-phone mbr-iconfont mobi-mbri-phone mobi-mbri" style="color: rgb(255, 153, 102); fill: rgb(255, 153, 102); font-size: 74px;"></span>
                     </div>
-                    <div class="contact-part">
-                        <div class="part1">
-                            
-                            <div class="part1box">
-                                <div class="phonetexts">                           
-                                    <h1 x-text="dict[lang]['phone']"></h1>
-                                    <a href="tel:+25776161970">
-                                        <p>+257 75 20 22 31</p>
-                                    </a>
-                                </div>
-                                <div class="iconphone">
-                                    <span class="mbri-hearth"></span>
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                            </div>
-                            <div class="part1box">
-                                <div class="phonetexts">
-                                    <h1 x-text="dict[lang]['emailfrom']"></h1>
-                                    <a href="mailto:contact@hogi.bi">
-                                        <p>contact@hogi.bi</p>
-                                    </a>
-                                </div>
-                                <div class="iconmail">
-                                    <i class="fas fa-envelope"></i> 
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <div class="part2">
-                            <div class="form">
-                                <label x-text="dict[lang]['email']" for=""></label>
-                                <br>
-                                <input type="email" placeholder="">
-                                <br>
-                                <p x-text="dict[lang]['formchamps']"></p>
-                                <br>
-                                <label x-text="dict[lang]['name']" for=""></label>
-                                <br>
-                                <input type="text">
-                                <br>
-                                <br>
-                                <label x-text="dict[lang]['message']" for=""></label>
-                                <br>
-                                <textarea name="" id="" cols="30" rows="10">
-                                </textarea>
-                                <br>
-                                <br>
-                                <a href="#">
-                                    <button x-text="dict[lang]['send']"></button>
-                                </a>
-                            </div>
-                        </div>
+                    <div class="text-wrapper">
+                        <h6 class="card-title mbr-fonts-style mb-1 display-5" x-text="dict[lang]['phone']">
+                            <strong>Phone</strong>
+                        </h6>
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            <a href="tel:+25768900800" class="text-danger text-primary">+257 75 20 22 31</a>
+                        </p>
                     </div>
+                </div>
+                <div class="card-wrapper">
+                    <div class="image-wrapper">
+                        <span class="fas fa-envelope mbr-iconfont mbri-letter"   style="font-size: 74px; color: rgb(255, 153, 102); fill: rgb(255, 153, 102);"></span>
+                    </div>
+                    <div class="text-wrapper">
+                        <h6 class="card-title mbr-fonts-style mb-1 display-5" x-text="dict[lang]['emailfrom']">
+                            <strong>Email</strong>
+                        </h6>
+                        <p class="mbr-text mbr-fonts-style display-7" >
+                            <a href="mailto:contact@hogi.bi" class="text-danger">contact@hogi.bi</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="map-wrapper col-12 col-md-6">
+				<form class="">
+				  <div class="form-group" >
+				    <label for="txt_email" x-text="dict[lang]['email']">Email address</label>
+				    <input type="email" class="form-control" id="txt_email" aria-describedby="emailHelp" >
+				    <small id="emailHelp" x-text="dict[lang]['formchamps']" class="form-text text-muted">We'll never share your email with anyone else.</small>
+				  </div>
+				  <div class="form-group">
+				    <label for="txt_name" x-text="dict[lang]['name']">Name</label>
+				    <input class="form-control" id="txt_name">
+				  </div>
+				  <div class="form-group">
+				    <label for="txt_message" x-text="dict[lang]['message']">Message</label>
+				    <textarea class="form-control" id="txt_message"></textarea> 
+				  </div>
+
+				  <button class="btn btn-block btn-primary btn-info" onclick="sendEmail(event)" x-text="dict[lang]['send']">
+				  	Submit
+				  </button>
+				</form>
+            </div>
+        </div>
+    </div>
+</section>
                 </div>
             </div>
         </div>
