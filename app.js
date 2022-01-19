@@ -53,7 +53,7 @@ document.addEventListener('alpine:init',() => {
 				'name':"Name:",
 				'message':"Message",
 				'phone':"Phone",
-				'droit':"All right reserved.",
+				'droit':"All rights reserved.",
 				'gtouch':"Get in touch"
 				},
 				'fr':{
