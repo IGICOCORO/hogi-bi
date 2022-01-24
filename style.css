@@ -14,6 +14,17 @@ body{
     outline: none;
     box-sizing: border-box;
 }
+.text-danger {
+    color: #fa6;
+}
+.text-warning {
+    color: #fe6;
+}
+strong{
+    color: #fff;
+    font-size: 48px;
+    line-height: 1;
+}
 .logo img{
     height:50px;
     transition:.2.2s;
@@ -184,13 +195,16 @@ margin-top:30px;
 }
 .button-contact button{
 padding:10px 20px 10px 20px;
-background-color:#148CCA;
+background-color:#69e;
 border:none;
 border-radius:3px;
 color:#fff;
 font-weight:bolder;
 box-shadow: 0px 2px 5px 0px black;
 cursor:pointer;
+}
+.button-contact button:hover{
+    background-color: #148CCA;
 }
 .button-contact i{
 color:#FFE161;
@@ -773,6 +787,11 @@ margin-left: 10px;
     margin-right: 20px;
     }
 @media screen and (max-width: 472px){
+    strong{
+    color: #fff;
+    font-size: 38px;
+    line-height: 1;
+    }
     .container-img .box img{
         height: 400px;
     }
@@ -781,7 +800,11 @@ margin-left: 10px;
       }
 }
 @media screen and (max-width: 640px) {
-    
+    strong{
+    color: #fff;
+    font-size: 38px;
+    line-height: 1;
+}
 .logo img{
     margin-top: 28px;
 }

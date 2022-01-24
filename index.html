@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="mobirise/style.css">.
+  <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
      <script src="./app.js" defer></script>
 
@@ -20,13 +20,13 @@
         header.classList.toggle("black", window.scrollY > 0);
     })
     </script>
-    <title>HOGI</title>
+    <title>Home</title>
 </head>
 
 <body>
     <div x-data="app">
         <div class="container">
-            <nav id="nav2">
+        <nav id="nav2">
         <div class="header">
             <div class="navbar">
                 <input id="nav-toggle"  type="checkbox" name="">
@@ -70,7 +70,6 @@
                                     </li>
                                 </ul>
                             </div>
-                </ul>
                 <label for="nav-toggle" class="icon-burger">
                     <div class="line"></div>
                     <div class="line"></div>
@@ -79,7 +78,7 @@
             </div>
         </div>
     </nav>
-        </div>
+    </div>
     <div class="section">
             <div class="title_part">
                 <div class="home">
@@ -88,67 +87,11 @@
                         <div class="text">
                             <h1>HOGI</h1>
                         </div>
-                      <div class="paragraph">
-                        <div class="wrapper">
-                    <div class="max-w-7xl mx-auto text-center" x-data="{
-                                    text: '',
-                                    textIndex: 0,
-                                    charIndex: 0,
-                                    pauseEnd: 1500,
-                                    cursorSpeed: 420,
-                                    pauseStart: 20,
-                                    typeSpeed: 110,
-                                    direction: 'forward'
-                                 }" x-init="(() => { 
-                                 
-                                    let typingInterval = setInterval(startTyping, $data.typeSpeed);
-                                 function startTyping(){
-                                    let current = $data.dict[lang]['textArray'][ $data.textIndex ];
-                                    if($data.charIndex > current.length){
-                                         $data.direction = 'backward';
-                                         clearInterval(typingInterval);
-                                         setTimeout(function(){
-                                            typingInterval = setInterval(startTyping, $data.typeSpeed);
-                                         }, $data.pauseEnd);
-                                    }   
-                                       
-                                    $data.text = dict[lang]['transf']+' '+current.substring(0, $data.charIndex)+'|';
-                                    if($data.direction == 'forward'){
-                                        $data.charIndex += 1;
-                                     } else {
-                                        if($data.charIndex == 0){
-                                            $data.direction = 'forward';
-                                            clearInterval(typingInterval);
-                                            setTimeout(function(){
-                                            
-                                                $data.textIndex += 1;
-                                                if($data.textIndex >= $data.dict[lang]['textArray'].length){
-                                                    $data.textIndex = 0;
-                                                }
-                                            
-                                                typingInterval = setInterval(startTyping, $data.typeSpeed);
-                                            }, $data.pauseStart);
-                                        }
-                                        $data.charIndex -= 1;
-                                     }
-                                  
-                                 }
-                                            
-                                 setInterval(function(){
-                                    if($refs.cursor.classList.contains('hidden')){
-                                        $refs.cursor.classList.remove('hidden');
-                                    } else {
-                                        $refs.cursor.classList.add('hidden');
-                                    }
-                                 }, $data.cursorSpeed);
-                             })()">
-                        <div class="relative">
-                            <h1  x-text="text"></h1>
-                            <span class="cursor" x-ref="cursor">
-                        </div>
-                        </div>
-                        </div>
-                    </div>
+                        <center>
+                            <h2>
+                            <strong>We transform <span class="typeit" @click="lang='en'"></span></strong>
+                            </h2> 
+                        </center>
                         <div class="button-contact">
                             <a href="#contact">
                                 <button class="touch">
@@ -174,7 +117,7 @@
                                         <i :class="Fafa[i]" :style="{'font-size':90 +'px','background-color':backIcon[i]}"></i>
                                     </div>
                                     <div class="texto">
-                                        <h3 :style="{ 'color':valText[i]}" x-text="dict[lang][valTechtitle[i]]"></h3><br>
+                                        <h3 :style="{ 'color':backIcon[i]}" x-text="dict[lang][valTechtitle[i]]"></h3><br>
                                         <span x-text="dict[lang][valTechdescr[i]]"></span>
                                     </div>
                                     
@@ -628,6 +571,49 @@ addEventListener("load", function(){
     }
 })
 </script>  
+
+
+<script type="text/javascript"> 
+    new TypeIt(".typeit", {
+
+          strings: 
+          [
+          "<span class='text-danger'>problems</span> into <span class='text-warning'>solutions.</span>", 
+          "<span class='text-danger'>issues</span> into <span class='text-warning'>opportunities.</span>",
+          "<span class='text-danger'>ideas</span> into <span class='text-warning'>reality.</span>"
+          ],
+          speed: 120,
+          waitUntilVisible: true,
+          loop: true,
+          breakLines:false
+    }).go();
+
+    function sendEmail(e){
+        e.preventDefault()
+        e.stopPropagation()
+        let txt_message = document.getElementById("txt_message").value
+        let txt_email = document.getElementById("txt_email").value
+        let txt_name = document.getElementById("txt_name").value
+        let message = `<h3>${txt_name}</h3> <h4>${txt_email}</h4><p>${txt_message}</p>`
+        let body = {
+            "title": "Mail from HOGI.BI",
+            "subject": "VISITOR MESSAGE",
+            "body": message,
+            "to": [
+                "manag.thierry@hogi.bi",
+                "primikiza@gmail.com",
+                "sangweno@gmail.com",
+                "architect@hogi.bi"
+            ]
+        }
+        axios.post('https://hogi.bi/mail_api/email/', body)
+        .then((response) => {
+            alert("SUCCESS")
+        }).catch((error) => {
+          console.error(error);
+        }) 
+    }
+</script>
 </body>
 
 </html>
