@@ -166,6 +166,9 @@ font-family:arial;
 font-weight:900;
 color:#fff;
 }
+.portfolio a{
+    color: black;
+}
 
 .button-contact{
 display:flex;
@@ -580,7 +583,8 @@ margin-top:20px;
     margin: 0;
   }
   .contacts3 .text-wrapper {
-    margin: 0;   
+    margin: 0;  
+    padding-top: 18px; 
   }
   .cid-sbjqjUNF7O .mbr-iconfont {
     padding-right: 1.5rem;
@@ -786,6 +790,9 @@ margin-left: 10px;
     height: 600px;
     /* margin-right: 90px; */
 }
+.container-img .box:hover::before {
+    top: 66%;
+  }
 
 .title-code p{
     font-size: 36px;
@@ -821,6 +828,10 @@ margin-left: 10px;
     font-size:25px;
     padding:15px 133px 15px 133px;
     }
+    .contacts3 .text-wrapper {
+        margin: 0;  
+        padding-top: 0px; 
+      }
     .container-values{
         margin: 0 -10px;
         margin: 0 auto;
@@ -898,7 +909,7 @@ margin-left: 10px;
 .lang-menu:hover ul {
         display: block;
         margin-right: 230px;
-        margin-top: -20px;
+        margin-top: -02px;
 }
 .contacts3 .row{
     display: flex;
@@ -1063,7 +1074,6 @@ margin-top:0px;
 .lang-menu:hover ul {
     display: block;
     margin-right: 77px;
-    margin-top: -20px;
 }
 .selected-lang p{
     margin-top: 5px;
