@@ -20,6 +20,9 @@ body{
 .text-warning {
     color: #fe6;
 }
+.bold{
+    font-weight: bold;
+}
 strong{
     color: #fff;
     font-size: 48px;
@@ -218,9 +221,9 @@ font-size:20px;
     width: 100%;
 }
 .valeurs{
-max-width: 100%;
+width: 100%;
 background-color:#ff9966;
-padding: 20px;
+padding: 10px;
 }
 .valeurs .title h1{
 font-size: 35px;
@@ -238,7 +241,6 @@ color:#ffffff;
 }
 .codes{
 background-color:#FAFAFA;
-padding:100px;
 }
 .title-code{
 text-align:center;
@@ -265,7 +267,7 @@ background-color:#ffffff;
 display:flex;
 justify-content:space-between;
 border-radius: 5px;
-width: 80%;
+width: 72%;
 }
 #code1{
 font-family:serif;
@@ -416,10 +418,7 @@ grid-template-columns:repeat(auto-fit,minmax(520px,41fr));
 grid-gap:50px;
 margin-top:60px;
 margin-bottom:70px;
-width: 75%;
-}
-.valeurs{
-    padding:20px;
+width: 80%;
 }
 .container-values .cardbox{
 position:relative;

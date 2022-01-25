@@ -507,25 +507,25 @@
                 </div>
             </div>
             <div class="map-wrapper col-12 col-md-6">
-				<form class="">
-				  <div class="form-group" >
-				    <label for="txt_email" x-text="dict[lang]['email']">Email address</label>
-				    <input type="email" class="form-control" id="txt_email" aria-describedby="emailHelp" >
-				    <small id="emailHelp" x-text="dict[lang]['formchamps']" class="form-text text-muted">We'll never share your email with anyone else.</small>
-				  </div>
-				  <div class="form-group">
-				    <label for="txt_name" x-text="dict[lang]['name']">Name</label>
-				    <input class="form-control" id="txt_name">
-				  </div>
-				  <div class="form-group">
-				    <label for="txt_message" x-text="dict[lang]['message']">Message</label>
-				    <textarea class="form-control" id="txt_message"></textarea> 
-				  </div>
+                <form class="">
+                  <div class="form-group" >
+                    <label for="txt_email" x-text="dict[lang]['email']">Email address</label>
+                    <input type="email" class="form-control" id="txt_email" aria-describedby="emailHelp" >
+                    <small id="emailHelp" x-text="dict[lang]['formchamps']" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="txt_name" x-text="dict[lang]['name']">Name</label>
+                    <input class="form-control" id="txt_name">
+                  </div>
+                  <div class="form-group">
+                    <label for="txt_message" x-text="dict[lang]['message']">Message</label>
+                    <textarea class="form-control" id="txt_message"></textarea> 
+                  </div>
 
-				  <button class="btn btn-block btn-primary btn-info" onclick="sendEmail(event)" x-text="dict[lang]['send']">
-				  	Submit
-				  </button>
-				</form>
+                  <button class="btn btn-block btn-primary btn-info" onclick="sendEmail(event)" x-text="dict[lang]['send']">
+                    Submit
+                  </button>
+                </form>
             </div>
         </div>
     </div>
@@ -572,7 +572,7 @@ addEventListener("load", function(){
 
 <script type="text/javascript"> 
 
-    function sendEmail(e){
+  /*  function sendEmail(e){
         e.preventDefault()
         e.stopPropagation()
         let txt_message = document.getElementById("txt_message").value
@@ -596,7 +596,7 @@ addEventListener("load", function(){
         }).catch((error) => {
           console.error(error);
         }) 
-    }
+    }*/
 </script>
 </body>
 

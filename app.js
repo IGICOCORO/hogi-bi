@@ -116,19 +116,19 @@ document.addEventListener('alpine:init',() => {
 				'portfolio':"Ibikorwa ",                            
 				'contact':"Turondere",
 				'techvalue':"Imyitwarariko yacu",
-				'securpriori':"Gukinga niwo mwitwarariko wacu",
+				'securpriori':"Ugukinga niwo mwitwarariko wacu",
 				'securprioridescr':"Kuri application iyo ariyo yose dukorako, haba hari abahinga muvyo gukinga. Turafatana uburemere ibijanye no gukingira ivyo muyakoreramwo", 
-				'perfoKey':"Kworosha nirwo rurimi rwacu",
+				'perfoKey':"Ugukora neza nirwo rufunguruzo",
 				'perfoKeyeDescr':"Ntanumwe akunda ivyikwega. Mugucungura umwanya, turagabanya uburemere bw'akantu kose kagize application kugira yuguruke bukwi na bukwi.",
-				'simplang':"Kworosha nirwo rurimi rwacu",
+				'simplang':"Ukworosha nirwo rurimi rwacu",
 				'simplangDescr':"Dukemura ibibazo vy'inganzamarumpu mugukora application zoroshe gukoresha kandi zikwije vyose.",
 				'designGeni':"Dukunda ibintu bisa neza",
 				'designGeniDesc':"Kuki twotanga ibitabereye ijisho kandi bishoboka ko kudokora igihushane cavyo? turi neza kandi dukunda ibibereye ijisho.",
-				'codeonlytitle':"Ikode ubwayo ntihagije",
+				'codeonlytitle':"code ubwayo ntihagije",
 				'comprehensKey':"Gutahura niryo shimikiro ryacu ",
-				'comprehensKeyDesc':"kuri clavier twandika imirongo myinshi cane gose ya </code> ariko mubuzima bwa misi yose dukemura ibibazo. Gutegera neza ibitagenda neza bituma dutora inyishu nziza y'ikibazo.Twibanda cane mugutegera.",	
+				'comprehensKeyDesc':"kuri clavier twandika imirongo myinshi cane gose ya </code> ariko mubuzima bwa misi yose dukemura ibibazo. Gutegera neza ibitagenda neza bituma dutora inyishu nziza y'ikibazo.Twibanda cane mugutegera",	
 				'codeuniversal':"code ni mpuzamakungu ariko abayandika bagatandukana",
-				'codeuniversaldescr':"Dukoresha langages de programation zimwe ariko dukemura ibibazo bitandukanye kubakiriya bafise intego n'imigambi bitandukanye.Duhinyanyura ivyo dukora twisunze ibikenewe kuri umwumwe wese.",
+				'codeuniversaldescr':"Dukoresha langages de programation zimwe ariko dukemura ibibazo bitandukanye kubakiriya bafise intego n'imigambi bitandukanye.Duhinyanyura ivyo dukora twisunze ibikenewe kuri umwumwe wese",
 				'dowhatulov':"Dukora ivyo dukunda, Dukunda ivyo dukora",
 				'dowhatulovdescr':"Kira munyamuryango wa HOGI yamaze imyaka ireka 5 yiga kandi yongera akora kumigambi itandukanye yishimisha. Kuri twebwe, kwandika code birengeye cane guca amafaranga, kwandika code bigize ubuzima bwacu bwa misi yose, n'umunezero wacu",
 				'handwithudev':"Turi bande ata muryango? Dukorana ubudahengeshanya na UDEV Team.",
@@ -153,7 +153,7 @@ document.addEventListener('alpine:init',() => {
 				'string':[
 		          "<span class='text-danger'>ibibazo</span> mu <span class='text-warning'>nyishu.</span>", 
 		          "<span class='text-danger'>ingorane</span> mu <span class='text-warning'>mahirwe.</span>",
-		          "<span class='text-danger'>ivyoyumbiro</span> mu <span class='text-warning'>bigaragara.</span>"
+		          "<span class='text-danger'>ivyiyumviro</span> mu <span class='text-warning'>bigaragara.</span>"
 		        ]	               
 			}
 	
