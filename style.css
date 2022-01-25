@@ -23,7 +23,12 @@ body{
 strong{
     color: #fff;
     font-size: 48px;
-    line-height: 1;
+    font-weight:700;
+}
+.typeit{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 400;
 }
 .logo img{
     height:50px;
@@ -164,7 +169,6 @@ margin-right:auto;
 text-align:center;
 margin-top:20px;
 }
-
 .wrapper h1{
     color: white;
     font-size: 48px;font-weight: 700;
@@ -195,12 +199,11 @@ margin-top:30px;
 }
 .button-contact button{
 padding:10px 20px 10px 20px;
-background-color:#69e;
+background-color:#4bf;
 border:none;
 border-radius:3px;
 color:#fff;
 font-weight:bolder;
-box-shadow: 0px 2px 5px 0px black;
 cursor:pointer;
 }
 .button-contact button:hover{
@@ -211,9 +214,13 @@ color:#FFE161;
 margin-top: 3px;
 font-size:20px;
 }
+.cards {
+    width: 100%;
+}
 .valeurs{
+max-width: 100%;
 background-color:#ff9966;
-padding:100px;
+padding: 20px;
 }
 .valeurs .title h1{
 font-size: 35px;
@@ -258,7 +265,7 @@ background-color:#ffffff;
 display:flex;
 justify-content:space-between;
 border-radius: 5px;
-width: 92%;
+width: 80%;
 }
 #code1{
 font-family:serif;
@@ -409,7 +416,7 @@ grid-template-columns:repeat(auto-fit,minmax(520px,41fr));
 grid-gap:50px;
 margin-top:60px;
 margin-bottom:70px;
-width: auto;
+width: 75%;
 }
 .valeurs{
     padding:20px;
@@ -827,7 +834,7 @@ margin-left: 10px;
    
     .container-values .cardbox .icon i{
         width: 100%;
-        padding: 130px 0px 100px 0px;
+        padding: 100px 0px 100px 0px;
         font-size:25px;
     }
     

@@ -50,19 +50,19 @@
                                     <i class="fas fa-angle-down"></i>
                                 </div>
                                 <ul class="flags">
-                                    <li class="flagname" @click="lang='en'">
+                                    <li class="flagname" @click="changeLanguage('en')">
                                         <a class="en">
                                             <img class="flag" src="./image/ENGLISH.jpg" alt="Image Load Error" width="25" height="15" />
                                             English
                                         </a>
                                     </li>
-                                    <li class="flagname" @click="lang='fr'">
+                                    <li class="flagname" @click="changeLanguage('fr')">
                                         <a class="fr">
                                             <img class="flag" src="./image/FRENCH.jpg" alt="Image Load Error" width="25" height="15" />
                                             French
                                         </a>
                                     </li>
-                                    <li class="flagname" @click="lang='rn'">
+                                    <li class="flagname" @click="changeLanguage('rn')">
                                         <a class="ki">
                                             <img class="flag" src="./image/KIRUNDI.jpg" alt="Image Load Error" width="25" height="15" />
                                             Kirundi
@@ -89,7 +89,7 @@
                         </div>
                         <center>
                             <h2>
-                            <strong>We transform <span class="typeit" @click="lang='en'"></span></strong>
+                            <strong x-text="dict[lang]['transf']"></strong> <span class="typeit"></span>
                             </h2> 
                         </center>
                         <div class="button-contact">
@@ -109,7 +109,6 @@
                         <h1 x-text="dict[lang]['techvalue']"></h1>
                     </div>
                     <div class="cards">
-                    
                             <div class="container-values">
                                 <template  x-for="item,i in valTechtitle">
                                 <div class="cardbox">
@@ -120,11 +119,9 @@
                                         <h3 :style="{ 'color':backIcon[i]}" x-text="dict[lang][valTechtitle[i]]"></h3><br>
                                         <span x-text="dict[lang][valTechdescr[i]]"></span>
                                     </div>
-                                    
                                 </div>
                             </template>
                             </div>
-                    
                     </div>
                 </div>
             </div>
@@ -574,19 +571,6 @@ addEventListener("load", function(){
 
 
 <script type="text/javascript"> 
-    new TypeIt(".typeit", {
-
-          strings: 
-          [
-          "<span class='text-danger'>problems</span> into <span class='text-warning'>solutions.</span>", 
-          "<span class='text-danger'>issues</span> into <span class='text-warning'>opportunities.</span>",
-          "<span class='text-danger'>ideas</span> into <span class='text-warning'>reality.</span>"
-          ],
-          speed: 120,
-          waitUntilVisible: true,
-          loop: true,
-          breakLines:false
-    }).go();
 
     function sendEmail(e){
         e.preventDefault()
