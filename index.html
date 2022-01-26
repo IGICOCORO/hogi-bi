@@ -116,7 +116,7 @@
                                         <i :class="Fafa[i]" :style="{'font-size':90 +'px','background-color':backIcon[i]}"></i>
                                     </div>
                                     <div class="texto">
-                                        <h3 :style="{ 'color':backIcon[i]}" x-text="dict[lang][valTechtitle[i]]"></h3><br>
+                                        <h3 :style="{ 'color':valText[i]}" :style="{ 'color':backIcon[i]}" x-text="dict[lang][valTechtitle[i]]"></h3><br>
                                         <span x-text="dict[lang][valTechdescr[i]]"></span>
                                     </div>
                                 </div>
@@ -549,7 +549,7 @@
                 </a>
             </div>
             <div id="copyright" class="copyright">
-                <p>©</p><p x-text="dict[lang]['cp']"></p> <span>&nbsp;</span> <p> <script>document.write(new Date().getFullYear())</script> | HOGI.</p><span>&nbsp;</span>
+                <p>©</p><p x-text="dict[lang]['cp']"></p> <span>&nbsp;</span> <p> <script>document.write(new Date().getFullYear())</script> | HOGI, </p><span>&nbsp;</span>
                 <p x-text="dict[lang]['droit']"></p>
             </div>
         </div>
