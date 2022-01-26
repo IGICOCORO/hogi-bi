@@ -116,7 +116,7 @@
                                         <i :class="Fafa[i]" :style="{'font-size':90 +'px','background-color':backIcon[i]}"></i>
                                     </div>
                                     <div class="texto">
-                                        <h3 :style="{ 'color':backIcon[i]}" x-text="dict[lang][valTechtitle[i]]"></h3><br>
+                                        <h3 :style="{ 'color':valText[i]}" :style="{ 'color':backIcon[i]}" x-text="dict[lang][valTechtitle[i]]"></h3><br>
                                         <span x-text="dict[lang][valTechdescr[i]]"></span>
                                     </div>
                                 </div>
@@ -564,6 +564,17 @@ addEventListener("load", function(){
         menu.addEventListener("click", function(){
             nav.checked = false;
             console.log(nav)
+        })
+    }
+})
+addEventListener("load", function(){
+    var lang = document.querySelectorAll(".flagname")
+    var langs;
+    for(var i=0;i<lang.length;i++){
+        langs = lang[i];
+        langs.addEventListener("click", function(){
+            lang = false;
+            console.log(lang)
         })
     }
 })
