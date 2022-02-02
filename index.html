@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,17 +9,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
-  <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
-     <script src="./app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="./app.js" defer></script>
 
-    <script  src="cdn.min.js" defer></script>
+    <script src="cdn.min.js" defer></script>
 
     <script type="text/javascript">
-    window.addEventListener("scroll", function() {
-        var header = document.querySelector("nav");
-        header.classList.toggle("black", window.scrollY > 0);
-    })
+        window.addEventListener("scroll", function() {
+            var header = document.querySelector("nav");
+            header.classList.toggle("black", window.scrollY > 0);
+        })
     </script>
     <title>Home</title>
 </head>
@@ -26,15 +27,15 @@
 <body>
     <div x-data="app">
         <div class="container">
-        <nav id="nav2">
-        <div class="header">
-            <div class="navbar">
-                <input id="nav-toggle"  type="checkbox" name="">
-                <div class="logo">
-                    <a href="index.html"><img  src="./image/logo1.png" alt=""></a>
-                </div>
-                <ul class="links">
-                    <template  x-for="(item,i) in menus">            
+            <nav id="nav2">
+                <div class="header">
+                    <div class="navbar">
+                        <input id="nav-toggle" type="checkbox" name="">
+                        <div class="logo">
+                            <a href="index.html"><img src="./image/logo1.png" alt=""></a>
+                        </div>
+                        <ul class="links">
+                            <template x-for="(item,i) in menus">            
                         <li class="listItem">
                             <a class="links" :href="`#${menus[i]}`">
                                 <i :class="icons[i]"></i>
@@ -42,44 +43,44 @@
                             </a>
                         </li>
                     </template>
-                </ul>
-                    <div class="lang-menu">
-                                <div class="selected-lang">
-                                    <img class="selectlang" :src="getFlags(lang)" width="25" height="15">
-                                    <p  x-text="dict[lang]['lang']"></p>
-                                    <i class="fas fa-angle-down"></i>
-                                </div>
-                                <ul class="flags">
-                                    <li class="flagname" @click="changeLanguage('en')">
-                                        <a class="en">
-                                            <img class="flag" src="./image/ENGLISH.jpg" alt="Image Load Error" width="25" height="15" />
-                                            English
-                                        </a>
-                                    </li>
-                                    <li class="flagname" @click="changeLanguage('fr')">
-                                        <a class="fr">
-                                            <img class="flag" src="./image/FRENCH.jpg" alt="Image Load Error" width="25" height="15" />
-                                            French
-                                        </a>
-                                    </li>
-                                    <li class="flagname" @click="changeLanguage('rn')">
-                                        <a class="ki">
-                                            <img class="flag" src="./image/KIRUNDI.jpg" alt="Image Load Error" width="25" height="15" />
-                                            Kirundi
-                                        </a>
-                                    </li>
-                                </ul>
+                        </ul>
+                        <div class="lang-menu">
+                            <div class="selected-lang">
+                                <img class="selectlang" :src="getFlags(lang)" width="25" height="15">
+                                <p x-text="dict[lang]['lang']"></p>
+                                <i class="fas fa-angle-down"></i>
                             </div>
-                <label for="nav-toggle" class="icon-burger">
+                            <ul class="flags">
+                                <div class="f">
+                                    <li class="flagname" @click="changeLanguage('en')" onclick="showHide()">
+                                        <a class="en">
+                                            <img class="flag" src="./image/ENGLISH.jpg" alt="Image Load Error" width="25" height="15" /> English
+                                        </a>
+                                    </li>
+                                </div>
+                                <li class="flagname" @click="changeLanguage('fr')" onclick="showHide()">
+                                    <a class="fr">
+                                        <img class="flag" src="./image/FRENCH.jpg" alt="Image Load Error" width="25" height="15" /> French
+                                    </a>
+                                </li>
+                                <li class="flagname" @click="changeLanguage('rn')" onclick="showHide()">
+                                    <a class="ki">
+                                        <img class="flag" src="./image/KIRUNDI.jpg" alt="Image Load Error" width="25" height="15" /> Kirundi
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <label for="nav-toggle" class="icon-burger">
                     <div class="line"></div>
                     <div class="line"></div>
                     <div class="line"></div>
                 </label>
-            </div>
+                    </div>
+                </div>
+            </nav>
         </div>
-    </nav>
-    </div>
-    <div class="section">
+        <div class="section">
             <div class="title_part">
                 <div class="home">
                     <div class="img">
@@ -89,8 +90,8 @@
                         </div>
                         <center>
                             <h2>
-                            <strong x-text="dict[lang]['transf']"></strong> <span class="typeit"></span>
-                            </h2> 
+                                <strong x-text="dict[lang]['transf']"></strong> <span class="typeit"></span>
+                            </h2>
                         </center>
                         <div class="button-contact">
                             <a href="#contact">
@@ -109,8 +110,8 @@
                         <h1 x-text="dict[lang]['techvalue']"></h1>
                     </div>
                     <div class="cards">
-                            <div class="container-values">
-                                <template  x-for="item,i in valTechtitle">
+                        <div class="container-values">
+                            <template x-for="item,i in valTechtitle">
                                 <div class="cardbox">
                                     <div class="icon" >
                                         <i :class="Fafa[i]" :style="{'font-size':90 +'px','background-color':backIcon[i]}"></i>
@@ -121,7 +122,7 @@
                                     </div>
                                 </div>
                             </template>
-                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -129,7 +130,7 @@
                 <div class="title-code">
                     <p x-text="dict[lang]['codeonlytitle']"></p>
                 </div>
-                <template x-for="item,i in codeonlytitleT.length" >
+                <template x-for="item,i in codeonlytitleT.length">
                     <div class="card1-code" >
                         <div class="pic">
                             <img :src="Images[i]" alt="">
@@ -175,7 +176,7 @@
                                     </a>
                                 </div>
                                 <div class="twitter">
-                                    <a target="blank"  href="https://twitter.com/prime_Ikiza" target="blank">
+                                    <a target="blank" href="https://twitter.com/prime_Ikiza" target="blank">
                                         <i class="fab fa-twitter">
                                         </i>
                                     </a>
@@ -193,7 +194,7 @@
                                 <img src="./image/yuda.jpg" alt="">
                             </div>
                             <h1>Yuda</h1>
-                            <p x-text="dict[lang]['GMD']" ></p>
+                            <p x-text="dict[lang]['GMD']"></p>
                             <div class="icons">
                                 <div class="facebook">
                                     <a target="blank" href="https://www.facebook.com/juda.inno" target="blank">
@@ -235,7 +236,7 @@
                                     </a>
                                 </div>
                                 <div class="twitter">
-                                    <a  target="blank" href="https://github.com/inganzamarumpu" target="blank">
+                                    <a target="blank" href="https://github.com/inganzamarumpu" target="blank">
                                         <i class="fab fa-github">
                                         </i>
                                     </a>
@@ -359,7 +360,7 @@
                             <p x-text="dict[lang]['dev']"></p>
                             <div class="icons">
                                 <div class="facebook">
-                                    <a  target="blank" href="">
+                                    <a target="blank" href="">
                                         <i class="fab fa-facebook-f">
                                         </i>
                                     </a>
@@ -452,12 +453,12 @@
                         </div>
                     </a>
                     <div class="cardpic">
-                            <div class="imgbox">
-                                <div class="img1">
-                                    <img src="./image/bimbo.jpg" alt="">
-                                </div>
-                                <p>BIMBO Supermarket</p>
+                        <div class="imgbox">
+                            <div class="img1">
+                                <img src="./image/bimbo.jpg" alt="">
                             </div>
+                            <p>BIMBO Supermarket</p>
+                        </div>
                         <a href="https://rcretraining.com/" target="blank">
                             <div class="imgbox">
                                 <div class="img1">
@@ -465,71 +466,71 @@
                                 </div>
                                 <p>RC Retraining</p>
                             </div>
-                         </a>
+                        </a>
                     </div>
                 </div>
             </div>
             <div :id="menus[3]">
                 <div class="contact">
                     <section class="contacts3 map1 cid-sbjqjUNF7O" id="contacts3-10" style="margin-bottom: 161.8px;">
-    <div class="container">
-        <div class="mbr-section-head">
-            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2" x-text="dict[lang]['titlecontact']">
-                <strong></strong></h3>
-        </div>
-        <div class="row justify-content-center mt-4">
-            <div class="card col-12 col-md-6">
-                <div class="card-wrapper">
-                    <div class="image-wrapper">
-                        <span class="fas fa-phone mbr-iconfont mobi-mbri-phone mobi-mbri" style="color: rgb(255, 153, 102); fill: rgb(255, 153, 102); font-size: 74px;"></span>
-                    </div>
-                    <div class="text-wrapper">
-                        <h6 class="card-title mbr-fonts-style mb-1 display-5" x-text="dict[lang]['phone']">
-                            <strong>Phone</strong>
-                        </h6>
-                        <p class="mbr-text mbr-fonts-style display-7">
-                            <a href="tel:+25768900800" class="text-danger text-primary">+257 75 20 22 31</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="card-wrapper">
-                    <div class="image-wrapper">
-                        <span class="fas fa-envelope mbr-iconfont mbri-letter"   style="font-size: 74px; color: rgb(255, 153, 102); fill: rgb(255, 153, 102);"></span>
-                    </div>
-                    <div class="text-wrapper">
-                        <h6 class="card-title mbr-fonts-style mb-1 display-5" x-text="dict[lang]['emailfrom']">
-                            <strong>Email</strong>
-                        </h6>
-                        <p class="mbr-text mbr-fonts-style display-7" >
-                            <a href="mailto:contact@hogi.bi" class="text-danger">contact@hogi.bi</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="map-wrapper col-12 col-md-6">
-                <form class="">
-                  <div class="form-group" >
-                    <label for="txt_email" x-text="dict[lang]['email']">Email address</label>
-                    <input type="email" class="form-control" id="txt_email" aria-describedby="emailHelp" >
-                    <small id="emailHelp" x-text="dict[lang]['formchamps']" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                  </div>
-                  <div class="form-group">
-                    <label for="txt_name" x-text="dict[lang]['name']">Name</label>
-                    <input class="form-control" id="txt_name">
-                  </div>
-                  <div class="form-group">
-                    <label for="txt_message" x-text="dict[lang]['message']">Message</label>
-                    <textarea class="form-control" id="txt_message"></textarea> 
-                  </div>
+                        <div class="container">
+                            <div class="mbr-section-head">
+                                <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2" x-text="dict[lang]['titlecontact']">
+                                    <strong></strong></h3>
+                            </div>
+                            <div class="row justify-content-center mt-4">
+                                <div class="card col-12 col-md-6">
+                                    <div class="card-wrapper">
+                                        <div class="image-wrapper">
+                                            <span class="fas fa-phone mbr-iconfont mobi-mbri-phone mobi-mbri" style="color: rgb(255, 153, 102); fill: rgb(255, 153, 102); font-size: 74px;"></span>
+                                        </div>
+                                        <div class="text-wrapper">
+                                            <h6 class="card-title mbr-fonts-style mb-1 display-5" x-text="dict[lang]['phone']">
+                                                <strong>Phone</strong>
+                                            </h6>
+                                            <p class="mbr-text mbr-fonts-style display-7">
+                                                <a href="tel:+25768900800" class="text-danger text-primary">+257 75 20 22 31</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrapper">
+                                        <div class="image-wrapper">
+                                            <span class="fas fa-envelope mbr-iconfont mbri-letter" style="font-size: 74px; color: rgb(255, 153, 102); fill: rgb(255, 153, 102);"></span>
+                                        </div>
+                                        <div class="text-wrapper">
+                                            <h6 class="card-title mbr-fonts-style mb-1 display-5" x-text="dict[lang]['emailfrom']">
+                                                <strong>Email</strong>
+                                            </h6>
+                                            <p class="mbr-text mbr-fonts-style display-7">
+                                                <a href="mailto:contact@hogi.bi" class="text-danger">contact@hogi.bi</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="map-wrapper col-12 col-md-6">
+                                    <form class="">
+                                        <div class="form-group">
+                                            <label for="txt_email" x-text="dict[lang]['email']">Email address</label>
+                                            <input type="email" class="form-control" id="txt_email" aria-describedby="emailHelp">
+                                            <small id="emailHelp" x-text="dict[lang]['formchamps']" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="txt_name" x-text="dict[lang]['name']">Name</label>
+                                            <input class="form-control" id="txt_name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="txt_message" x-text="dict[lang]['message']">Message</label>
+                                            <textarea class="form-control" id="txt_message"></textarea>
+                                        </div>
 
-                  <button class="btn btn-block btn-primary btn-info" onclick="sendEmail(event)" x-text="dict[lang]['send']">
+                                        <button class="btn btn-block btn-primary btn-info" onclick="sendEmail(event)" x-text="dict[lang]['send']">
                     Submit
                   </button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
@@ -549,55 +550,63 @@
                 </a>
             </div>
             <div id="copyright" class="copyright">
-                <p>©</p><p x-text="dict[lang]['cp']"></p> <span>&nbsp;</span> <p> <script>document.write(new Date().getFullYear())</script> | HOGI, </p><span>&nbsp;</span>
+
                 <p x-text="dict[lang]['droit']"></p>
             </div>
         </div>
     </div>
-<script>
-addEventListener("load", function(){
-    var menus = document.querySelectorAll(".listItem")
-    var nav = document.getElementById("nav-toggle")
-    var menu;
-    for(var i=0; i<menus.length; i++){
-        menu = menus[i];
-        menu.addEventListener("click", function(){
-            nav.checked = false;
-            console.log(nav)
-        })
-    }
-})
-</script>  
+    <script>
+        addEventListener("load", function() {
+                var menus = document.querySelectorAll(".listItem")
+                var nav = document.getElementById("nav-toggle")
+                var menu;
+                for (var i = 0; i < menus.length; i++) {
+                    menu = menus[i];
+                    menu.addEventListener("click", function() {
+                        nav.checked = false;
+                        console.log(nav)
+                    })
+                }
+            })
+            // var flagSection = document.querySelector(".flags");
+            // var isShow = true;
+            // function showHide(){
+            //     if(isShow){      
+            //         flagSection.style.opacity = 0;
+            //         console.log(flagSection)
+            //         isShow = false;
+            //     }
+            // }
+    </script>
 
 
-<script type="text/javascript"> 
-
-  /*  function sendEmail(e){
-        e.preventDefault()
-        e.stopPropagation()
-        let txt_message = document.getElementById("txt_message").value
-        let txt_email = document.getElementById("txt_email").value
-        let txt_name = document.getElementById("txt_name").value
-        let message = `<h3>${txt_name}</h3> <h4>${txt_email}</h4><p>${txt_message}</p>`
-        let body = {
-            "title": "Mail from HOGI.BI",
-            "subject": "VISITOR MESSAGE",
-            "body": message,
-            "to": [
-                "manag.thierry@hogi.bi",
-                "primikiza@gmail.com",
-                "sangweno@gmail.com",
-                "architect@hogi.bi"
-            ]
-        }
-        axios.post('https://hogi.bi/mail_api/email/', body)
-        .then((response) => {
-            alert("SUCCESS")
-        }).catch((error) => {
-          console.error(error);
-        }) 
-    }*/
-</script>
+    <script type="text/javascript">
+        /*  function sendEmail(e){
+                e.preventDefault()
+                e.stopPropagation()
+                let txt_message = document.getElementById("txt_message").value
+                let txt_email = document.getElementById("txt_email").value
+                let txt_name = document.getElementById("txt_name").value
+                let message = `<h3>${txt_name}</h3> <h4>${txt_email}</h4><p>${txt_message}</p>`
+                let body = {
+                    "title": "Mail from HOGI.BI",
+                    "subject": "VISITOR MESSAGE",
+                    "body": message,
+                    "to": [
+                        "manag.thierry@hogi.bi",
+                        "primikiza@gmail.com",
+                        "sangweno@gmail.com",
+                        "architect@hogi.bi"
+                    ]
+                }
+                axios.post('https://hogi.bi/mail_api/email/', body)
+                .then((response) => {
+                    alert("SUCCESS")
+                }).catch((error) => {
+                  console.error(error);
+                }) 
+            }*/
+    </script>
 </body>
 
 </html>
