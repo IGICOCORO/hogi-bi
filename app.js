@@ -69,7 +69,7 @@ document.addEventListener('alpine:init',() => {
 				'contact':"Contact", 
 				'techvalue':"Nos valeurs techniques",
 				'securpriori':"La sécurité est notre priorité", 
-				'securprioridescr':"Nous résolvons des problèmes complexes en utilisant une solution simple et puissante",
+				'securprioridescr':"Derrière chaque application sur laquelle nous travaillons, il y a une communauté d'experts qui gèrent les problèmes de sécurité. Nous prenons la sécurité de vos données au sérieux",
 				'perfoKey':"La performance est la clé",
 				'perfoKeyeDescr':"Personne n'aime un long temps de chargement. Nous optimisons chaque ressource pour vous faire gagner du temps avec des applications ultra-rapides",
 				'simplang':"La simplicité est notre langage",
