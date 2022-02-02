@@ -45,7 +45,7 @@
                     </template>
                         </ul>
                         <div class="lang-menu">
-                            <div class="selected-lang">
+                            <div onclick="showFlags()" class="selected-lang">
                                 <img class="selectlang" :src="getFlags(lang)" width="25" height="15">
                                 <p x-text="dict[lang]['lang']"></p>
                                 <i class="fas fa-angle-down"></i>
@@ -562,55 +562,60 @@
     </div>
     <script>
         addEventListener("load", function() {
-                var menus = document.querySelectorAll(".listItem")
-                var nav = document.getElementById("nav-toggle")
-                var menu;
-                for (var i = 0; i < menus.length; i++) {
-                    menu = menus[i];
-                    menu.addEventListener("click", function() {
-                        nav.checked = false;
-                        console.log(nav)
-                    })
-                }
-            })
-            // var flagSection = document.querySelector(".flags");
-            // var isShow = true;
-            // function showHide(){
-            //     if(isShow){      
-            //         flagSection.style.opacity = 0;
-            //         console.log(flagSection)
-            //         isShow = false;
-            //     }
-            // }
+            var menus = document.querySelectorAll(".listItem")
+            var nav = document.getElementById("nav-toggle")
+            var menu;
+            for (var i = 0; i < menus.length; i++) {
+                menu = menus[i];
+                menu.addEventListener("click", function() {
+                    nav.checked = false;
+                    console.log(nav)
+                })
+            }
+        })
+        var flagSection = document.querySelector(".flags");
+        // var isShow = true;
+
+        function showHide() {
+            flagSection.style.display = 'none';
+        }
+
+        function showFlags() {
+            if (flagSection.style.display == 'none') {
+                flagSection.style.display = 'block';
+            } else {
+                flagSection.style.display = 'none';
+            }
+        }
     </script>
 
 
     <script type="text/javascript">
         /*  function sendEmail(e){
-                e.preventDefault()
-                e.stopPropagation()
-                let txt_message = document.getElementById("txt_message").value
-                let txt_email = document.getElementById("txt_email").value
-                let txt_name = document.getElementById("txt_name").value
-                let message = `<h3>${txt_name}</h3> <h4>${txt_email}</h4><p>${txt_message}</p>`
-                let body = {
-                    "title": "Mail from HOGI.BI",
-                    "subject": "VISITOR MESSAGE",
-                    "body": message,
-                    "to": [
-                        "manag.thierry@hogi.bi",
-                        "primikiza@gmail.com",
-                        "sangweno@gmail.com",
-                        "architect@hogi.bi"
-                    ]
-                }
-                axios.post('https://hogi.bi/mail_api/email/', body)
-                .then((response) => {
-                    alert("SUCCESS")
-                }).catch((error) => {
-                  console.error(error);
-                }) 
-            }*/
+                 e.preventDefault()
+                 e.stopPropagation()
+                 let txt_message = document.getElementById("txt_message").value
+                 let txt_email = document.getElementById("txt_email").value
+                 let txt_name = document.getElementById("txt_name").value
+                 let message = `<h3>${txt_name}</h3> <h4>${txt_email}</h4><p>${txt_message}</p>`
+                 let body = {
+                     "title": "Mail from HOGI.BI",
+                     "subject": "VISITOR MESSAGE",
+                     "body": message,
+                     "to": [
+                         "manag.thierry@hogi.bi",
+                         "primikiza@gmail.com",
+                         "sangweno@gmail.com",
+                         "architect@hogi.bi"
+                     ]
+                 }
+                 axios.post('https://hogi.bi/mail_api/email/', body)
+                 .then((response) => {
+                     alert("SUCCESS")
+                 }).catch((error) => {
+                   console.error(error);
+                 }) 
+                     }*/
     </script>
 </body>
 
